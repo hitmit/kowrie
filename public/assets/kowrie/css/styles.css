@@ -1,0 +1,2411 @@
+/**
+ * @file
+ * Styles are organized using the SMACSS technique. @see http://smacss.com/book/
+ *
+ * When you turn on CSS aggregation at admin/config/development/performance, all
+ * of these @include files will be combined into a single file.
+ */
+
+/* HTML element (SMACSS base) rules */
+@import "normalize.css";
+
+/* Layout rules */
+@import "layouts/responsive.css";
+
+/* Component (SMACSS module) rules 
+@import "components/misc.css";*/
+/* Optionally, add your own components here. */
+@import "print.css";
+
+/* SMACSS theme rules */
+/* @import "theme-A.css"; */
+/* @import "theme-B.css"; */
+
+.site-width {
+    width: 1000px;
+    margin: auto;
+}
+
+/* header */
+
+.header-top {
+    background: url(../images/headertop-bg.gif) repeat left bottom;
+    border-bottom: 1px solid #ffffff;
+    min-height: 37px;
+    float: left;
+    width: 100%;
+    text-align: right;
+}
+
+.header {
+    background: #ffffff url(../images/headerbg1.gif) no-repeat center top;
+}
+
+.header-inner {
+    float: left;
+    width: 100%;
+}
+
+.header-inner .site-width {
+    background: url(../images/headerbg2.gif) no-repeat right bottom;
+    padding: 14px 0;
+    overflow: hidden;
+}
+
+.header__logo {
+    float: none;
+    border-top: 14px solid #c20000;
+    display: block;
+}
+
+.header__name-and-slogan {
+    clear: both;
+    background: #c20000;
+    color: #ffffff;
+    float: none;
+    font-size: 12px;
+    text-align: center;
+}
+
+.header-left {
+    float: left;
+    width: 218px;
+}
+
+#navigation {
+    border-bottom: 5px solid #a80001;
+    background: #ffffff;
+    line-height: 22px;
+}
+
+#navigation div.contextual-links-wrapper {
+    left: 5px;
+    right: auto;
+}
+
+#navigation .site-width {
+    background: url(../images/navbg.gif) repeat left bottom;
+    min-height: 44px;
+}
+
+#navigation .links li, 
+#navigation .menu li {
+    float: left;
+    padding: 0;
+}
+
+#navigation .links li a:link, 
+#navigation .links li a:visited, 
+#navigation .menu li a:link,
+#navigation .menu li a:visited {
+    display: block;
+    color: #000000;
+    text-shadow: 1px 1px #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-right: 1px solid #fafafa;
+    padding: 11px 12px;
+    line-height: 22px;
+}
+
+#navigation .links li a:hover, 
+#navigation .links li a.active,
+#navigation .menu li a:hover, 
+#navigation .menu li a.active {
+    color: #ffffff;
+    background: url(../images/navhover.gif) repeat-x left bottom;
+    text-shadow: 1px 1px #000000;
+}
+
+#navigation .links li.last a,  
+#navigation .menu li.last a {
+    border-right: none;
+}
+
+.tinynav-wrapper {
+    text-align: center;
+    display: none;
+    clear: both;
+    min-height: 33px;
+}
+
+.tinynav-wrapper select.tinynav {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    height: 30px;
+    display: block;
+}
+
+html body.admin-menu {
+    margin-top: 48px !important;
+}
+
+#main .main-inner {
+    background: url(../images/content-shadow.png) no-repeat center top;
+}
+
+#main {
+    background: url(../images/content-seprator.png) no-repeat center bottom;
+    padding-bottom: 21px;
+}
+
+.content-outer {
+    background: #ffffff;
+    float: left;
+    width: 100%;
+}
+
+#footer {
+    margin: 0 10px;
+    background: #f4f3f3;
+    padding: 17px 10px;
+    clear: both;
+}
+
+.region-footer {
+    clear: both;
+}
+
+.region-footer-messages {
+    padding: 25px 10px;
+    text-align: center;
+    color: #808080;
+    font-size: 11px;
+    clear: both;
+    text-align: center;
+}
+
+.region-footer-messages .block {
+    margin: 0;
+    display: inline-block;
+}
+
+.lt-ie8 .region-footer-messages .block {
+    display: inline;
+}
+
+.region-footer-messages .block p {
+    margin: 0;
+}
+
+.region-footer-messages .block a {
+    color: #808080;
+}
+
+.region-footer-messages ul.menu {
+    padding: 0;
+    margin: 0;
+    display: block !important;
+}
+
+.region-footer-messages .tinynav-wrapper {
+    display: none;
+}
+
+.region-footer-messages ul.menu li {
+    list-style: none;
+    display: inline;
+    border-right: 1px solid #a2a2a2;
+    padding-left: 2px;
+    padding-right: 6px;
+}
+
+.lt-ie8 .region-footer-messages ul.menu li {
+    padding-left: 6px;
+    padding-right: 3px;
+}
+
+.region-footer-messages ul.menu li.last {
+    border-right: none;
+}
+
+.region-footer .block {
+    text-align: center;
+    margin: 0;
+}
+
+.header-top .block {
+    margin: 0;
+    display: inline-block;
+    color: #ffffff;
+}
+
+.header-top ul.menu {
+    margin: 0;
+    padding: 0 39px 0 0;
+}
+
+.header-top ul.menu li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 14px;
+    border-left: 1px solid #c41e1f;
+    border-right: 1px solid #970203;
+    float: none;
+}
+
+.header-top ul.menu li.first {
+    border-left: none;
+}
+
+.header-top ul.menu li.last {
+    border-right: none;
+    padding-right: 0;
+}
+
+.header-top ul.menu li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 9px 0 13px 20px;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    background: url(../images/icons.png) no-repeat left 10px;
+}
+
+.header-top ul.menu li.sf-item-3 a {
+    background-position: left 10px;
+}
+
+.header-top ul.menu li.sf-item-4 a {
+    background-position: left -57px;
+}
+
+.header-top ul.menu li.client-billing a {
+    background-position: left -57px;
+}
+
+.header-top ul.menu li.sf-item-1 a,
+.header-top ul.menu li.login a {
+    background-position: left -21px;
+}
+
+/* superfish menu start */
+
+.sf-menu.sf-horizontal.sf-shadow ul,
+.sf-menu.sf-vertical.sf-shadow ul,
+.sf-menu.sf-navbar.sf-shadow ul ul,
+.sf-menu li.menuparent:hover ul {
+    background: #C20000;
+    padding: 0 !important;
+    border-radius: none;
+    top: 36px;
+    border-radius: 5px;
+    border: 1px solid #a60000;
+    border-top-color: #ffffff;
+    width: 200px !important;
+}
+
+.block-superfish ul.menu ul ul {
+    top: 0 !important;
+    left: 201px !important;
+    display: none !important;
+}
+
+.block-superfish ul.menu ul li:hover ul {
+    display: block !important;
+}
+
+.block-superfish ul.menu li ul li {
+    border-bottom: 1px solid #ffffff;
+    border-width: 0 0 1px 0;
+    padding: 0;
+    text-align: left;
+}
+
+.block-superfish ul.menu li ul li.last {
+    border: none;
+}
+
+.block-superfish ul.menu li ul li a:link,
+.block-superfish ul.menu li ul li a:visited {
+    padding: 8px 6px;
+    background: none;
+    font-weight: normal;
+    text-align: left;
+}
+
+.block-superfish ul.menu li ul li span.nolink {
+    padding: 8px 6px;
+    display: block;
+    cursor: cursor;
+}
+
+.block-superfish ul.menu li ul li:hover span.nolink {
+    background: #930000;
+    color: #ffffff;
+}
+
+.block-superfish ul.menu li ul li a:hover,
+.block-superfish ul.menu li ul li  a.active,
+.block-superfish ul.menu li:hover ul li a:hover,
+.block-superfish ul.menu li:hover ul li a.active {
+    background: #930000;
+    color: #ffffff;
+}
+
+/* superfish menu close */
+
+.region-content-top {
+    padding: 10px 10px 0px 10px;
+}
+
+.not-front .content_top {
+    background: url(../images/searchbg.gif);
+    margin-bottom: 1px;
+    width: 100%;
+    float: left;
+}
+
+.region-content-top .block {
+    margin-bottom: 10px;
+}
+
+.region-content-bottom {
+    clear: both;
+    padding: 20px 0 0 0;
+}
+
+.content-main {
+    clear: both;
+    background: url(../images/contentbg.gif) no-repeat center top;
+    padding: 47px 0 28px 0;
+    float: left;
+    width: 100%;
+}
+
+.not-front .content-main {
+    padding-top: 10px;
+}
+
+#content {
+    font-style: italic;
+    float: left;
+    margin-right: -100%;
+    width: 100%;
+    padding: 0;
+}
+
+.content-inner {
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+}
+
+.sidebar-first .content-inner {
+    margin-left: 250px;
+    border-left: 1px solid #DADADA;
+}
+
+.sidebar-first .content-main-inner {
+    background: url(../images/sidebar-border.gif) repeat-y 250px top;
+    float: left;
+    width: 100%;
+}
+
+.sidebar-first .region-sidebar-first,
+.two-sidebars .region-sidebar-first {
+    float: left;
+    width: 250px;
+    padding-left: 20px;
+    margin-right: -250px;
+}
+
+.sidebar-second .content-inner {
+    margin-right: 274px;
+}
+
+.sidebar-second .region-sidebar-second,
+.two-sidebars .region-sidebar-second {
+    float: right;
+    width: 274px;
+    padding-right: 20px;
+}
+
+.two-sidebars .content-inner {
+    padding: 0 294px;
+}
+
+.view-kowrie-home-page-content-block .views-row {
+    width: 288px;
+    float: left;
+    font-style: italic;
+    padding: 17px 21px 0 24px;
+    border-right: 1px solid #e5e5e5;
+    min-height: 360px;
+    text-align: justify;
+    margin-bottom: 0;
+    clear: none;
+}
+
+.view-kowrie-home-page-content-block .views-row-first {
+    padding-left: 0;
+}
+
+.view-kowrie-home-page-content-block .views-row-last {
+    padding-right: 0px;
+    border-right: none;
+}
+
+.view-kowrie-home-page-content-block .views-field-title {
+    margin: 0 0 10px 0;
+    font-size: 22px;
+    color: #000000;
+    font-weight: normal;
+}
+
+body.front #page-title,
+.front #first-time {
+    display: none;
+}
+
+body.front .block-views {
+    margin-bottom: 0;
+}
+
+.view-kowrie-home-page-content-block .views-field-nid a:link,
+.view-kowrie-home-page-content-block .views-field-nid a:visited,
+.view-kowrie-home-page-content-block .views-field-nid a:hover {
+    width: 100px;
+    display: block;
+    background: #b30001;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-style: normal;
+    text-decoration: none;
+    padding: 5px 0 4px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#block-system-main {
+    clear: both;
+}
+
+.breadcrumb {
+    border-bottom: 1px solid #f3eaf3;
+    font-style: italic;
+    padding: 0 0 8px 10px;
+    margin: 0 10px 20px 10px;
+}
+
+.breadcrumb a {
+    color: #4e4e4e;
+    text-decoration: none;
+}
+
+#page-title {
+    font-size: 22px;
+    color: #000000;
+    font-style: italic;
+    font-weight: normal;
+    margin-bottom: 25px;
+    line-height: normal;
+}
+
+/**
+ * Tabs.
+ */
+
+/* Basic positioning styles shared by primary and secondary tabs. */
+
+a.tabs-primary__tab-link,
+a.tabs-secondary__tab-link {
+    border: 1px solid #e9e9e9;
+    border-right: 0;
+    border-bottom: 0;
+    display: block;
+    line-height: 1.5em;
+    text-decoration: none;
+}
+
+/* tab */
+/* Primary tabs. */
+.tabs-primary li,
+.tabs-primary li.active {
+    -moz-border-radius-topleft: 4px;
+    -webkit-border-top-left-radius: 4px;
+    border-top-left-radius: 4px;
+    -moz-border-radius-topright: 4px;
+    -webkit-border-top-right-radius: 4px;
+    border-top-right-radius: 4px;
+    text-shadow: 1px 1px 0 white;
+    border: 1px solid #bbbbbb;
+    border-bottom-color: transparent;
+  /* IE 9 and earlier don't understand gradients. */
+  border-bottom: 0 \0/ie;
+  display:inline;
+}
+.active.tabs-primary {
+  border-bottom-color: white;
+}
+.tabs-primary li a,
+.tabs-primary li a.active {
+  -moz-border-radius-topleft: 4px;
+  -webkit-border-top-left-radius: 4px;
+  border-top-left-radius: 4px;
+  -moz-border-radius-topright: 4px;
+  -webkit-border-top-right-radius: 4px;
+  border-top-right-radius: 4px;
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  color: #333;
+  background-color: #dedede;
+  letter-spacing: 1px;
+  padding: 0 1em;
+  text-align: center;
+  white-space:nowrap;
+}
+.tabs-primary li a:hover,
+.tabs-primary li a:focus {
+  background-color: #e9e9e9;
+  border-color: #f2f2f2;
+}
+.tabs-primary li a:active,
+.tabs-primary li a.active {
+  background-color: transparent;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFE9E9E9', endColorstr='#00E9E9E9');
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e9e9e9), color-stop(100%, rgba(233, 233, 233, 0)));
+  background-image: -webkit-linear-gradient(#e9e9e9, rgba(233, 233, 233, 0));
+  background-image: -moz-linear-gradient(#e9e9e9, rgba(233, 233, 233, 0));
+  background-image: -o-linear-gradient(#e9e9e9, rgba(233, 233, 233, 0));
+  background-image: linear-gradient(#e9e9e9, rgba(233, 233, 233, 0));
+  border-color: #fff;
+}
+
+/* Secondary tabs. */
+
+.action-links {
+  padding-left:0;
+}
+
+.tabs-secondary li,
+.tabs-secondary li.active,
+.action-links li {
+  display:inline-block;
+  margin:0.5em 0.5em 0.5em 0;
+}
+
+.lt-ie8 .tabs-secondary li,
+.lt-ie8 .tabs-secondary li.active,
+.lt-ie8 .action-links li {
+  display:inline;
+}
+
+.tabs-secondary li a,
+.action-links li a {
+  -webkit-border-radius: 0.75em;
+  -moz-border-radius: 0.75em;
+  -ms-border-radius: 0.75em;
+  -o-border-radius: 0.75em;
+  border-radius: 0.75em;
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  text-shadow: 1px 1px 0 white;
+  background-color: #f2f2f2;
+  color: #666;
+  padding: 0 1em;
+  display:inline-block;
+}
+
+.tabs-secondary li a:hover,
+.tabs-secondary li a:focus,
+.action-links li a:hover {
+  background-color: #dedede;
+  border-color: #999;
+  color: #333;
+}
+
+.tabs-secondary li a:active,
+.tabs-secondary li a.active {
+  text-shadow: 1px 1px 0 #333333;
+  background-color: #666;
+  border-color: #000;
+  color: #fff;
+}
+
+/* Secondary tabs. CLOSE */
+
+/* Jump menu */
+.block-jump-menu {
+  display:none;
+}
+
+.block-jump-menu select {
+  max-width:100%;
+  width:400px;
+  margin:auto;
+  height:30px;
+  display:block;
+}
+
+.node {
+  clear:both;
+}
+
+.node ul {
+  padding:0;
+}
+
+.node ul li {
+  list-style:none;
+  background:url(../images/bullet1.png) no-repeat left 6px;
+  padding:0 0 0 19px;
+}
+
+.node ul li a:hover {
+  color: #4E4E4E;
+  text-decoration:none;
+}
+
+#content .node ul.inline li {
+  padding-left:0;
+  background:none;
+}
+
+ul.about-address li {
+  padding-left:0;
+  background:none;
+}
+
+.form-actions {
+  margin-top:1em;
+}
+
+/* user login */
+body.not-logged-in.page-user .content-inner {
+  width:450px;
+  margin:auto;
+  border:1px solid #dadada;
+  padding:20px;
+}
+
+body.not-logged-in.page-user-register .content-inner {
+  width:auto;
+  border:none;
+  padding-left:20px;
+  padding-right:20px;
+}
+
+body.not-logged-in.page-user .content-inner h1#page-title {
+  text-align:center;
+  margin-bottom:10px;
+}
+
+body.not-logged-in.page-user-register .content-inner h1#page-title {
+  text-align:left;
+}
+
+#user-login .from-item {
+  clear:both;
+}
+
+#user-login label {
+  float:left;
+  width:200px;
+}
+
+#user-login input.form-text {
+  width:200px;
+}
+
+#user-login .description {
+  padding-left:200px;
+}
+
+#user-login .form-actions {
+  text-align:center;
+}
+
+/* register form */
+form[id*="user-register-form"] .form-item {
+  clear:both;
+  margin:12px 0 0 0;
+  width:auto;
+}
+
+form[id*="user-register-form"] .form-type-password-confirm {
+  margin-top:0;
+}
+
+form[id*="user-register-form"] label {
+  float: left;
+  font-weight: normal;
+  padding-right: 20px;
+  text-align: right;
+  width: 250px;
+}
+
+form[id*="user-register-form"] label.option {
+  float:none;
+  width:auto;
+  padding-right:0;
+}
+
+form[id*="user-register-form"] input.form-text {
+  width:350px;
+}
+
+form[id*="user-register-form"] .form-textarea-wrapper {
+  display:inline-block;
+  width:350px;
+}
+
+form[id*="user-register-form"] select {
+ width:350px;
+}
+
+form[id*="user-register-form"] a.ui-selectmenu {
+ /*width:318px !important;*/
+}
+
+form[id*="user-register-form"] .sbHolder {
+ width:350px;
+}
+
+form[id*="user-register-form"] .field-name-field-kowrie-member {
+  padding-left:270px;
+  clear:both;
+}
+
+.lt-ie8 form[id*="user-register-form"] .field-name-field-kowrie-member {
+  padding-left:0;
+}
+
+.lt-ie8 form[id*="user-register-form"] .field-name-field-kowrie-member input {
+  margin-left:270px;
+}
+
+form[id*="user-register-form"] fieldset {
+  padding:5px 0 0 270px;
+  margin:0;
+  border:none;
+}
+
+form[id*="user-register-form"] fieldset legend {
+  display:none;
+}
+
+form[id*="user-register-form"] fieldset .form-item {
+  margin-top:0;
+}
+
+form[id*="user-register-form"] .form-radios {
+  float:left;
+}
+
+form[id*="user-register-form"] .form-radios .form-item {
+  margin-top:0;
+}
+
+form[id*="user-register-form"] .description {
+  padding-left:270px;
+  max-width:350px;
+}
+
+form[id*="user-register-form"] .form-checkboxes {
+  float:left;
+}
+
+form[id*="user-register-form"] .form-checkboxes .form-item {
+  margin-top:0;
+  margin-bottom:5px;
+}
+
+.buttons {
+  clear:both;
+  text-align:center;
+  float:left;
+  width:100%;
+  padding-top:10px;
+}
+
+.buttons div {
+  display:inline;
+  margin-top:0;
+}
+
+/* user profile */
+
+.profile .field {
+  clear:left;
+  padding-bottom:5px;
+}
+
+.profile dl {
+  position:relative;
+}
+
+.profile .field-label {
+  float: left;
+  padding-right: 10px;
+  text-align: right;
+  width: 250px;
+}
+
+.profile .field-name-field-company-logo-image {
+  float:right;
+  padding:0 0 10px 10px;
+}
+
+/* booking search form - front */
+#block-kowrie-invoice-payment-rooms-availability-search-custom {  width:301px;  border-right:1px solid #ffffff;  background:url(../images/searchblock-bg.gif);  min-height:270px;  padding:34px 11px 0 11px;  float:left;  overflow:visible;}
+#block-kowrie-invoice-payment-rooms-availability-search-custom .start-date,#block-kowrie-invoice-payment-rooms-availability-search-custom .end-date {  margin-right:0;  float:none;}
+#block-kowrie-invoice-payment-rooms-availability-search-custom .start-date .form-item,#block-kowrie-invoice-payment-rooms-availability-search-custom .end-date .form-item {  padding-bottom:3px;  float:none;}
+#block-kowrie-invoice-payment-rooms-availability-search-custom h2.block-title {  text-transform:uppercase;  margin-bottom:10px;}
+#block-kowrie-invoice-payment-rooms-availability-search-custom label {  float:left;  padding:7px 0 6px 12px;  width:102px;  font-size:15px;  font-weight:bold;  line-height:22px;  background:url(../images/labelbg.png) no-repeat right center;  color:#ffffff;  text-shadow:1px 1px #000000;  position:relative;  margin-right:-5px;  z-index:1;}
+#block-kowrie-invoice-payment-rooms-availability-search-custom label span {  color:#ffffff;}
+#block-kowrie-invoice-payment-rooms-availability-search-custom .date-padding {  float:left;  width:190px;  padding:0;}
+#block-kowrie-invoice-payment-rooms-availability-search-custom .date-padding label {  display:none;}
+#block-kowrie-invoice-payment-rooms-availability-search-custom .form-item {  display:block;  margin:0;}#block-kowrie-invoice-payment-rooms-availability-search-custom input.form-text {  margin-right:0;  width:190px;  height:35px;  border:1px solid #d8d8d8;  border-left-width:0;  padding:0 36px 0 10px;}.lt-ie9 #block-kowrie-invoice-payment-rooms-availability-search-custom input.form-text {  padding-top:8px;  line-height:normal;}.lt-ie8 #block-kowrie-invoice-payment-rooms-availability-search-custom input.form-text {  height:25px;  width:144px;}#block-kowrie-invoice-payment-rooms-availability-search-custom .date-padding input.form-text {  background:#ffffff url(../images/icon-calander.gif) no-repeat 95% center;}#block-kowrie-invoice-payment-rooms-availability-search-custom select {  margin-right:0;  width:190px;  height:35px;  border:1px solid #d8d8d8;  border-left-width:0;  background:#ffffff;  padding-left:10px;}#block-kowrie-invoice-payment-rooms-availability-search-custom #rooms-wrapper {  display:none;}#block-kowrie-invoice-payment-rooms-availability-search-custom .form-actions {  padding-top:12px;  text-align:right;}
+#block-kowrie-invoice-payment-rooms-availability-search-custom .form-actions input {  margin:0;  background:url(../images/btn-search.png) no-repeat left top;  width:130px;  height:37px;  padding:7px 0 7px 53px;  line-height:22px;  text-transform:uppercase;  text-shadow:1px 1px #000000;  text-align:left;}
+#block-kowrie-invoice-payment-rooms-availability-search-custom .ui-corner-all,#block-kowrie-invoice-payment-rooms-availability-search-custom a.ui-selectmenu {  height:34px;}
+#block-kowrie-invoice-payment-rooms-availability-search-custom .sbHolder {  height:23px;  width: 188px;  line-height:24px;}
+#block-kowrie-invoice-payment-rooms-availability-search-custom .sbToggle {  min-height:34px;}
+#block-kowrie-invoice-payment-rooms-availability-search-custom .ui-state-default .ui-icon {  width:34px;}
+#block-kowrie-invoice-payment-rooms-availability-search-custom .ui-selectmenu-status {  padding-top:8px;}#block-kowrie-rooms-rooms-availability-search-custom {position:relative; z-index:2;  width:301px;  border-right:1px solid #ffffff;  background:url(../images/searchblock-bg.gif);  min-height:270px;  padding:34px 11px 0 11px;  float:left;  overflow:visible;}#block-kowrie-rooms-rooms-availability-search-custom .start-date,#block-kowrie-rooms-rooms-availability-search-custom.end-date {  margin-right:0;  float:none;}#block-kowrie-rooms-rooms-availability-search-custom .start-date .form-item,#block-kowrie-rooms-rooms-availability-search-custom .end-date .form-item {  padding-bottom:3px;  float:none;}#block-kowrie-rooms-rooms-availability-search-custom h2.block-title {  text-transform:uppercase;  margin-bottom:10px;}#block-kowrie-rooms-rooms-availability-search-custom label {  float:left;  padding:7px 0 6px 12px;  width:102px;  font-size:15px;  font-weight:bold;  line-height:22px;  background:url(../images/labelbg.png) no-repeat right center;  color:#ffffff;  text-shadow:1px 1px #000000;  position:relative;  margin-right:-5px;  z-index:1;}#block-kowrie-rooms-rooms-availability-search-custom label span {  color:#ffffff;}#block-kowrie-rooms-rooms-availability-search-custom .date-padding {  float:left;  width:190px;  padding:0;}#block-kowrie-rooms-rooms-availability-search-custom .date-padding label {  display:none;}#block-kowrie-rooms-rooms-availability-search-custom .form-item {  display:block;  margin:0;}#block-kowrie-rooms-rooms-availability-search-custom input.form-text {  margin-right:0;  width:190px;  height:35px;  border:1px solid #d8d8d8;  border-left-width:0;  padding:0 36px 0 10px;}.lt-ie9 #block-kowrie-rooms-rooms-availability-search-custom input.form-text {  padding-top:8px;  line-height:normal;}.lt-ie8 #block-kowrie-rooms-rooms-availability-search-custom input.form-text {  height:25px;  width:144px;}#block-kowrie-rooms-rooms-availability-search-custom .date-padding input.form-text {  background:#ffffff url(../images/icon-calander.gif) no-repeat 95% center;}#block-kowrie-rooms-rooms-availability-search-custom select {  margin-right:0;  width:190px;  height:35px;  border:1px solid #d8d8d8;  border-left-width:0;  background:#ffffff;  padding-left:10px;}#block-kowrie-rooms-rooms-availability-search-custom #rooms-wrapper {  display:none;}#block-kowrie-rooms-rooms-availability-search-custom .form-actions {  padding-top:12px;  text-align:right;}#block-kowrie-rooms-rooms-availability-search-custom .form-actions input {  margin:0;  background:url(../images/btn-search.png) no-repeat left top;  width:130px;  height:37px;  padding:7px 0 7px 53px;  line-height:22px;  text-transform:uppercase;  text-shadow:1px 1px #000000;  text-align:left;}#block-kowrie-rooms-rooms-availability-search-custom .ui-corner-all,#block-kowrie-rooms-rooms-availability-search-custom a.ui-selectmenu {  height:34px;}#block-kowrie-rooms-rooms-availability-search-custom .sbHolder {  height:23px;  width: 188px;  line-height:24px;}#block-kowrie-rooms-rooms-availability-search-custom .sbToggle {  min-height:34px;}#block-kowrie-rooms-rooms-availability-search-custom .ui-state-default .ui-icon {  width:34px;}#block-kowrie-rooms-rooms-availability-search-custom .ui-selectmenu-status {  padding-top:8px;}
+/* booking search - inner page */
+#block-kowrie-invoice-payment-rooms-search-all-pages {  float:left;  width:100%;}
+
+#block-kowrie-invoice-payment-rooms-search-all-pages h2.block-title {  float:left;  padding-right:9px;  padding-top:10px;  text-shadow:1px 1px #ffffff;  font-size:16px;}
+#block-kowrie-invoice-payment-rooms-search-all-pages form {  float:left;}
+#block-kowrie-invoice-payment-rooms-search-all-pages label {  float:left;  padding:7px 0 6px 12px;  width:102px;  font-size:15px;  font-weight:bold;  line-height:22px;  background:url(../images/labelbg.png) no-repeat right center;  color:#ffffff;  text-shadow:1px 1px #000000;  position:relative;  margin-right:-5px;  z-index:1;}
+#block-kowrie-invoice-payment-rooms-search-all-pages label span {  color:#ffffff;}#block-kowrie-invoice-payment-rooms-search-all-pages .start-date,#block-kowrie-invoice-payment-rooms-search-all-pages .end-date,#block-kowrie-invoice-payment-rooms-search-all-pages .rooms-wrapper,#block-kowrie-invoice-payment-rooms-search-all-pages .form-item-province,#block-kowrie-invoice-payment-rooms-search-all-pages .form-actions {  float:left;  margin-right:0;}
+#block-kowrie-invoice-payment-rooms-search-all-pages .date-padding {  padding:0;}
+#block-kowrie-invoice-payment-rooms-search-all-pages .date-padding label {  display:none;}#block-kowrie-invoice-payment-rooms-search-all-pages .form-item {  display:block;  margin:0 5px 0 0;}
+#block-kowrie-invoice-payment-rooms-search-all-pages .form-item .form-item {  margin-right:0;  float:none;}
+.lt-ie9 #block-kowrie-invoice-payment-rooms-search-all-pages .form-item .form-item {  width:121px;}
+#block-kowrie-invoice-payment-rooms-search-all-pages input.form-text {  margin-right:0;  width:121px;  height:35px;  border:1px solid #d8d8d8;  border-left-width:0;  padding:0 36px 0 10px;}
+.lt-ie9 #rooms-booking-availability-search-form input.form-text {  padding-top:8px;  line-height:normal;}
+.lt-ie8 #rooms-booking-availability-search-form input.form-text {  height:25px;  width:144px;}
+#block-kowrie-invoice-payment-rooms-search-all-pages .date-padding input.form-text {  background:#ffffff url(../images/icon-calander.gif) no-repeat 95% center;}
+.lt-ie9 #block-kowrie-invoice-payment-rooms-search-all-pages .date-padding input.form-text {  padding-top:8px;}
+#block-kowrie-invoice-payment-rooms-search-all-pages select {  margin-right:0;  width:190px;  height:35px;  border:1px solid #d8d8d8;  border-left-width:0;  background:#ffffff;  padding-left:10px;}
+.lt-ie9 #block-kowrie-invoice-payment-rooms-search-all-pages select {  width:180px;}
+#block-kowrie-invoice-payment-rooms-search-all-pages #rooms-wrapper {  display:none;}
+#block-kowrie-invoice-payment-rooms-search-all-pages .form-actions {  clear: none;  margin-top: 0;  width:130px;}
+#block-kowrie-invoice-payment-rooms-search-all-pages .form-actions input {  margin:0;  background:url(../images/btn-search.png) no-repeat left top;  width:130px;  height:37px;  padding:7px 0 7px 53px;  line-height:22px;  text-transform:uppercase;  text-shadow:1px 1px #000000;  text-align:left;  font-weight:bold;}
+#block-kowrie-invoice-payment-rooms-search-all-pages .ui-corner-all,#block-kowrie-invoice-payment-rooms-search-all-pages a.ui-selectmenu {  height:34px;  width:160px;}
+#block-kowrie-invoice-payment-rooms-search-all-pages .sbHolder {  height:23px;  width: 188px;  line-height:24px;}.lt-ie9 #block-kowrie-invoice-payment-rooms-search-all-pages .sbHolder {  width:174px;}
+#block-kowrie-invoice-payment-rooms-search-all-pages .sbToggle {  min-height:34px;}
+#block-kowrie-invoice-payment-rooms-search-all-pages .ui-state-default .ui-icon {  width:34px;}
+#block-kowrie-invoice-payment-rooms-search-all-pages .ui-selectmenu-status {  padding-top:8px;}#block-kowrie-rooms-rooms-search-all-pages {  float:left;  width:100%;}#block-kowrie-rooms-rooms-search-all-pages h2.block-title {  float:left;  padding-right:9px;  padding-top:10px;  text-shadow:1px 1px #ffffff;  font-size:16px;}#block-kowrie-rooms-rooms-search-all-pages form {  float:left;}#block-kowrie-rooms-rooms-search-all-pages label {  float:left;  padding:7px 0 6px 12px;  width:102px;  font-size:15px;  font-weight:bold;  line-height:22px;  background:url(../images/labelbg.png) no-repeat right center;  color:#ffffff;  text-shadow:1px 1px #000000;  position:relative;  margin-right:-5px;  z-index:1;}#block-kowrie-rooms-rooms-search-all-pages label span {  color:#ffffff;}#block-kowrie-rooms-rooms-search-all-pages .start-date,#block-kowrie-rooms-rooms-search-all-pages .end-date,#block-kowrie-rooms-rooms-search-all-pages .rooms-wrapper,#block-kowrie-rooms-rooms-search-all-pages .form-item-province,#block-kowrie-rooms-rooms-search-all-pages .form-actions {  float:left;  margin-right:0;}#block-kowrie-rooms-rooms-search-all-pages .date-padding {  padding:0;}#block-kowrie-rooms-rooms-search-all-pages .date-padding label {  display:none;}#block-kowrie-rooms-rooms-search-all-pages .form-item {  display:block;  margin:0 5px 0 0;}#block-kowrie-rooms-rooms-search-all-pages .form-item .form-item {  margin-right:0;  float:none;}#block-kowrie-rooms-rooms-search-all-pages .form-item .form-item {  width:121px;}#block-kowrie-rooms-rooms-search-all-pages input.form-text {  margin-right:0;  width:121px;  height:35px;  border:1px solid #d8d8d8;  border-left-width:0;  padding:0 36px 0 10px;}.lt-ie9 #rooms-booking-availability-search-form input.form-text {  padding-top:8px;  line-height:normal;}.lt-ie8 #rooms-booking-availability-search-form input.form-text {  height:25px;  width:144px;}#block-kowrie-rooms-rooms-search-all-pages .date-padding input.form-text {  background:#ffffff url(../images/icon-calander.gif) no-repeat 95% center;}.lt-ie9 #block-kowrie-rooms-rooms-search-all-pages .date-padding input.form-text {  padding-top:8px;}#block-kowrie-rooms-rooms-search-all-pages select {  margin-right:0;  width:190px;  height:35px;  border:1px solid #d8d8d8;  border-left-width:0;  background:#ffffff;  padding-left:10px;}.lt-ie9 #block-kowrie-rooms-rooms-search-all-pages select {  width:180px;}#block-kowrie-rooms-rooms-search-all-pages #rooms-wrapper {  display:none;}#block-kowrie-rooms-rooms-search-all-pages .form-actions {  clear: none;  margin-top: 0;  width:130px;}#block-kowrie-rooms-rooms-search-all-pages .form-actions input {  margin:0;  background:url(../images/btn-search.png) no-repeat left top;  width:130px;  height:37px;  padding:7px 0 7px 53px;  line-height:22px;  text-transform:uppercase;  text-shadow:1px 1px #000000;  text-align:left;  font-weight:bold;}#block-kowrie-rooms-rooms-search-all-pages .ui-corner-all,#block-kowrie-rooms-rooms-search-all-pages a.ui-selectmenu {  height:34px;  width:160px;}#block-kowrie-rooms-rooms-search-all-pages .sbHolder {  height:23px;  width: 188px;  line-height:24px;}.lt-ie9 #block-kowrie-rooms-rooms-search-all-pages .sbHolder {  width:174px;}#block-kowrie-rooms-rooms-search-all-pages.sbToggle {  min-height:34px;}#block-kowrie-rooms-rooms-search-all-pages .ui-state-default .ui-icon {  width:34px;}#block-kowrie-rooms-rooms-search-all-pages .ui-selectmenu-status {  padding-top:8px;}
+/* reservation search result */
+
+.reservation_desc {
+  padding-bottom:30px;
+}
+
+.room_class {
+  border:1px solid #e3e2e2;
+  padding:12px 12px 0 12px;
+  clear:both;
+  margin-bottom:14px;
+  min-height:75px;
+  overflow:hidden;
+  background:#f5f5f5;
+}
+
+.room_logo {
+  float:left;
+}
+
+.room_logo img {
+  display:block;
+  border:1px solid #ffffff;
+  margin-right:12px;
+  margin-bottom:12px;
+}
+
+.room_name {
+  font-weight:bold;
+  color:#828282;
+  font-style:normal;
+  padding:0 0 10px 0;
+}
+
+.room_description {
+  padding:0 0 10px 0;
+}
+
+.room_description p {
+  margin-top:0;
+}
+
+.room_read_more {
+  float:left;
+  padding:0 0 12px 0;
+}
+
+.room_read_more a {
+  background:url(../images/buttonbg-gray.gif) repeat-x left bottom;
+  border-radius: 3px;
+  color: #FFFFFF;
+  display: inline-block;
+  font-style: normal;
+  line-height: normal;
+  margin-right: 3px;
+  padding: 10px 20px;
+  text-shadow: 1px 1px #000000;
+  text-transform: uppercase;
+  text-decoration:none;
+}
+
+.room_make_reservation {
+  float:left;
+  padding:0 0 12px 0;
+}
+
+.room_make_reservation a {
+  background: url(../images/buttonbg-red.gif) repeat-x left bottom;
+  border-radius: 3px;
+  color: #FFFFFF;
+  display: inline-block;
+  font-style: normal;
+  line-height: normal;
+  margin-right: 3px;
+  text-shadow: 1px 1px #000000;
+  text-transform: uppercase;
+}
+
+.room_make_reservation a span {
+  display: inline-block;
+  padding: 10px 20px 10px 51px;
+  background: url(../images/icon-01.png) no-repeat left center;
+}
+
+a.link-gray {
+}
+
+a.link-red {
+}
+
+a.link-red span {
+}
+
+
+/* jcarousel */
+#block-views-slide-jcarousel-block {
+  clear:both;
+}
+
+.jcarousel-skin-default .jcarousel-container-horizontal {
+  width:845px;
+  padding:14px 16px;
+  border:1px solid #eaeaea;
+  height:162px;
+}
+
+.jcarousel-skin-default .jcarousel-clip-horizontal {
+  width:845px;
+}
+
+.jcarousel-skin-default .jcarousel-item-horizontal {
+  margin:0 10px 0 0;
+}
+
+.jcarousel-skin-default .jcarousel-item {
+  width:275px;
+  height:162px;
+  border:none;
+}
+
+.jcarousel-skin-default .jcarousel-next,
+.jcarousel-skin-default .jcarousel-next:hover,
+.jcarousel-skin-default .jcarousel-prev,
+.jcarousel-skin-default .jcarousel-prev:hover {
+  width:44px;
+  height:44px;
+  background:url(../images/jcarsouel-arrow.png) no-repeat left bottom;
+  right:-15px;
+  top:40%;
+}
+
+.jcarousel-skin-default .jcarousel-prev,
+.jcarousel-skin-default .jcarousel-prev:hover {
+  background-position:left top;
+  left:-15px;
+}
+
+/* jcarousel CLOSE */
+
+/* newsletter */
+#block-newsletter-newsletter-subscribe {
+  float:left;
+}
+
+#block-newsletter-newsletter-subscribe h2 {
+  font-size:13px;
+  font-weight:normal;
+}
+
+#block-newsletter-newsletter-subscribe .form-item {
+  float:left;
+  width:291px;
+}
+
+#block-newsletter-newsletter-subscribe .form-item input.form-text {
+  border:1px solid #e0dfdf;
+  border-right-width:0;
+  padding:5px 5px 5px 14px;
+  width:291px;
+}
+
+#block-newsletter-newsletter-subscribe #subscribe {
+  float:left;
+}
+
+#block-newsletter-newsletter-subscribe input.form-submit {
+  font-size:14px;
+  text-transform:uppercase;
+  background:url(../images/btn-newsletter.gif) no-repeat left top;
+  width:100px;
+  height:34px;
+}
+
+/* newsletter close */
+
+/* Send page by email */
+#print-mail-form  .form-item {
+  clear:both;
+  overflow:hidden;
+}
+
+#print-mail-form label {
+  float:left;
+  width:175px;
+}
+
+#print-mail-form .form-textarea-wrapper {
+  float:left;
+  width:516px;
+}
+
+#print-mail-form .description {
+  clear:both;
+  padding-left:176px;
+}
+
+#print-mail-form input#edit-btn-submit {
+  margin-left:176px;
+}
+
+/* site map */
+.site-map-menus .site-map-box-menu {
+  width:25%;
+  float:left;
+}
+
+/* user profile */
+
+#user-profile-form label {
+  float:left;
+  width:250px;
+  padding-right:12px;
+  text-align:right;
+}
+
+#user-profile-form label.option {
+  float:none;
+  width:auto;
+  padding-right:0;
+}
+
+#user-profile-form input.form-text {
+  width:300px;
+}
+
+#user-profile-form select {
+  width:300px;
+}
+
+#user-profile-form .sbHolder {
+  width:300px;
+}
+
+#user-profile-form .form-textarea-wrapper {
+  width:300px;
+  float:left;
+}
+
+#user-profile-form .form-wrapper {
+  clear:both;
+  padding-left:0;
+  padding-right:0;
+}
+
+#user-profile-form #edit-subscriptions {
+  padding-left:0.625em;
+  padding-right:0.625em;
+}
+
+#user-profile-form .fieldset-description {
+  padding-bottom:5px;
+}
+
+#user-profile-form .form-radios {
+  float:left;
+  width:300px;
+}
+
+#user-profile-form .form-radios .form-item {
+  margin:0;
+}
+
+#user-profile-form .description {
+  padding-left:262px;
+  clear:both;
+  margin-left:0;
+  max-width:300px;
+  line-height:normal;
+}
+
+#user-profile-form .password-suggestions {
+  padding-left:5px;
+  margin-left:262px;
+  max-width:288px;
+}
+
+#user-profile-form .form-actions {
+  padding-left:262px;
+}
+
+.page-user-edit-simplenews #user-profile-form .form-actions {
+  padding-left:0;
+}
+
+.confirm-parent, .password-parent {
+  width: 44.3em;
+}
+
+.password-strength,
+div.password-confirm {
+  padding-left:262px;
+  float:none;
+  padding-bottom:5px;
+  margin-top:0;
+}
+
+div.form-item div.password-suggestions {
+  width:auto;
+}
+
+#user-profile-form #edit-legal .form-type-checkbox {
+  padding-left:262px;
+}
+
+#user-profile-form .form-item {
+  width:100%;
+  float:left;
+  margin:0.4em 0;
+}
+
+#user-profile-form .form-checkboxes {
+  float:left;
+}
+
+#user-profile-form .form-checkboxes .form-item {
+  width:auto;
+  float:none;
+  margin:0;
+}
+
+#user-profile-form #edit-mimemail {
+  margin-left: 262px;
+  max-width:300px;
+}
+
+#user-profile-form .form-type-checkbox {
+  width:auto;
+  padding-left: 262px;
+}
+
+#user-profile-form #edit-mimemail .form-type-checkbox {
+  padding-left:10px;
+  max-width:100%;
+}
+
+#user-profile-form .form-checkboxes .form-type-checkbox {
+  padding-left: 0;
+  max-width:100%;
+}
+
+#user-profile-form .form-type-checkbox .description {
+  padding-left:0;
+}
+
+/* user profile CLOSE */
+
+/* Invoice */
+.invoice-print-download-links {
+  padding:0 0 12px 0;
+  text-align:right;
+}
+
+.invoice-print-download-links ul {
+  margin:0;
+  padding:0;
+}
+
+.invoice-print-download-links ul li {
+  list-style:none;
+}
+
+.invoice-outer{
+  padding:15px;
+  border:1px solid #dadada;
+  overflow:hidden;
+}
+
+.invoice-header {
+  padding-bottom:15px;
+  overflow:hidden;
+}
+
+.invoice-header table {
+  margin:0;
+}
+
+.invoice-header-left {
+  float: left;
+  vertical-align: top;
+  width: 400px;
+}
+
+.invoice-header-left-title {
+  float:left;
+  font-weight:bold;
+  padding-right:10px;
+  width:60px;
+}
+
+.invoice-header-left-data {
+  display:inline-block;
+  width:300px;
+}
+
+.invoice-header-right-td {
+  vertical-align: top;
+  width:240px;
+}
+
+.invoice-header-right h1 {
+  margin:0 0 12px 0;
+  line-height:normal;
+}
+
+.invoice-header-right-sub-title {
+  font-weight:bold;
+}
+
+.invoice-header-right-data label {
+  float:left;
+  width:120px;
+  padding:0 10px 0 0;
+  display:block;
+  font-weight:normal;
+}
+
+.invoice-header-result {
+  float:left;
+  width:120px;
+  padding:0 10px 0 0;
+}
+
+.invoice-header-right-data .duedate {
+  border:1px solid #dadada;
+  padding:3px;
+}
+
+.invoice-content {
+  clear:both;
+  padding:15px 0;
+  border:1px solid #dadada;
+  border-width:1px 0;
+  overflow:auto;
+}
+
+.invoice-content h3 {
+  margin:0 0 5px 0;
+}
+
+.invoice-content table {
+  margin:0;
+}
+
+.invoice-footer {
+  clear:both;
+  padding-top:15px;
+}
+
+.invoice-footer table {
+  margin:0;
+}
+
+.invoice-footer table tr td {
+  vertical-align:top;
+}
+
+.invoice-footer-left {
+  white-space: nowrap;
+  display:inline-block;
+  width:25%;
+}
+
+.invoice-footer-left h1 {
+  margin:0;
+  line-height:normal;
+}
+
+.invoice-footer-left span {
+  font-weight:bold;
+}
+
+.invoice-footer-right {
+  text-align:right;
+  width:72%;
+  display:inline-block;
+}
+
+#user-invoices-filter-form {
+  text-align:right;
+}
+
+#user-invoices-filter-form .form-item {
+  margin:0 0 4px 0;
+  display:inline;
+  padding-right:3px;
+  text-align:left;
+}
+
+#user-invoices-filter-form .ui-selectmenu {
+  width:auto !important;
+}
+
+#user-invoices-filter-form .sbHolder {
+  max-width:200px;
+}
+
+.lt-ie9 #user-invoices-filter-form .sbHolder {
+  top:9px;
+}
+
+#user-invoices-filter-form label {
+  display:inline;
+  padding-right:3px;
+}
+
+#user-invoices-filter-form .form-item-search-for input {
+  padding: 5px 2px;
+  width: 150px;
+}
+
+#user-invoices-filter-form input.form-submit {
+  margin-bottom:4px;
+}
+
+
+/* Invoice CLOSE */
+
+/* common CSS of webform client form */
+
+.webform-client-form a.ui-selectmenu {
+  width:121px !important;
+}
+
+#edit-submitted-title-menu {
+  width:121px !important;
+}
+
+.webform-client-form label {
+  float:left;
+  width:250px;
+  padding-right:12px;
+  text-align:right;
+  margin-right:0;
+  font-weight:normal;
+}
+
+.webform-client-form label.option {
+  float:none;
+  width:auto;
+  padding-right:0;
+}
+
+.webform-client-form input.form-text {
+  width:300px;
+}
+
+.webform-client-form .captcha input.form-text {
+  width:auto;
+}
+
+.webform-client-form select {
+  max-width:300px;
+}
+
+.webform-client-form .form-textarea-wrapper {
+  width:300px;
+  float:left;
+}
+
+.webform-client-form .form-wrapper {
+  clear:both;
+  padding-left:0;
+  padding-right:0;
+}
+
+.webform-client-form .form-radios {
+  float:left;
+  width:300px;
+}
+
+.webform-client-form .description {
+  padding-left:262px;
+  clear:both;
+}
+
+.webform-client-form .user-register-reset {
+  padding-left:262px;
+}
+
+.webform-client-form #edit-legal .form-type-checkbox {
+  padding-left:262px;
+}
+
+.webform-client-form .form-item {
+  overflow:hidden;
+  width:auto;
+}
+
+.webform-client-form .form-checkboxes {
+  float:left;
+}
+
+.webform-client-form .form-type-checkbox {
+  padding-left: 262px;
+}
+
+.webform-client-form .form-checkboxes .form-type-checkbox {
+  padding-left: 0;
+}
+
+.webform-client-form .form-type-checkbox .description {
+  padding-left:0;
+}
+
+.webform-client-form .form-actions {
+  padding-left:262px;
+}
+
+.webform-client-form fieldset.captcha {
+  border:none;
+  padding:0 0 0 260px;
+  margin-left:0;
+  margin-right:0;
+  max-width:300px;
+}
+
+.webform-client-form fieldset.captcha legend {
+  display:none;
+}
+
+.webform-client-form fieldset.captcha label {
+  text-align:left;
+  width:auto;
+}
+
+.webform-client-form fieldset.captcha input.form-text {
+  width:100px;
+}
+
+.webform-client-form fieldset.captcha .form-item {
+  margin:5px 0;
+}
+
+.webform-client-form fieldset.captcha .description {
+  padding:5px 0 0 0;
+  line-height:normal;
+  text-align:left;
+}
+
+.webform-client-form #webform-component-type-of-enquiry .ui-selectmenu {
+  width:auto !important;
+  min-width:100px;
+}
+
+/* common CSS of webform client form CLOSE */
+
+li.dhtml-folder.expanded {
+  list-style-image:none;
+}
+
+.usermanagement-links {
+  width:100%;
+  float:left;
+}
+
+.usermanagement-links div {
+  display:inline-block;
+  margin-bottom:5px;
+}
+
+.usermanagement-links a {
+  background:url(../images/buttonbg.gif) repeat-x left bottom;
+  border:none;
+  color:#ffffff;
+  text-transform:uppercase;
+  font-style:normal;
+  padding:7px 10px 5px 10px;
+  margin-right:5px;
+  display:inline-block;
+}
+
+.view-site-user-listing .vbo-views-form {
+  overflow:auto;
+  padding-bottom:10px;
+}
+
+.view-site-user-listing form {
+  padding-bottom:30px;
+  position:relative;
+}
+
+.view-site-user-listing #edit-select {
+  padding:0;
+  border:none;
+  text-align:right;
+  position:absolute;
+  right:0;
+  bottom:0;
+  margin:0;
+}
+
+.view-site-user-listing #edit-select legend {
+  display:none;
+}
+
+.region-help .block {
+  overflow:hidden;
+}
+
+/* All service provider */
+.view-accommodation-service-providers-listings {
+
+}
+
+.view-accommodation-service-providers-listings .views-row {
+  clear:both;
+  border:1px solid #e3e2e2;
+  padding:12px 12px 0 12px;
+  clear:both;
+  margin-bottom:14px;
+  min-height:75px;
+  overflow:hidden;
+  background:#f5f5f5;
+}
+
+.view-accommodation-service-providers-listings .views-field-field-company-logo-image {
+  float:left;
+}
+
+.view-accommodation-service-providers-listings .views-field-field-company-logo-image img {
+  display:block;
+  border:1px solid #ffffff;
+  margin-right:12px;
+  margin-bottom:12px;
+}
+
+.view-accommodation-service-providers-listings .views-field-field-company-name {
+  font-weight:bold;
+  color:#828282;
+  font-style:normal;
+  padding:0 0 10px 0;
+}
+
+.view-accommodation-service-providers-listings .views-field-field-description {
+  padding:0 0 10px 0;
+}
+
+.readmore {
+  float:left;
+  padding:0 0 12px 0;
+}
+
+.readmore a {
+  background:url(../images/buttonbg-gray.gif) repeat-x left bottom;
+  border-radius: 3px;
+  color: #FFFFFF;
+  display: inline-block;
+  font-style: normal;
+  line-height: normal;
+  margin-right: 3px;
+  padding: 10px 20px;
+  text-shadow: 1px 1px #000000;
+  text-transform: uppercase;
+  text-decoration:none;
+}
+
+.make_reservation {
+  float:left;
+  padding:0 0 12px 0;
+}
+
+.make_reservation a {
+  background: url(../images/buttonbg-red.gif) repeat-x left bottom;
+  border-radius: 3px;
+  color: #FFFFFF;
+  display: inline-block;
+  font-style: normal;
+  line-height: normal;
+  margin-right: 3px;
+  text-shadow: 1px 1px #000000;
+  text-transform: uppercase;
+}
+
+.make_reservation a span {
+  display: inline-block;
+  padding: 10px 20px 10px 51px;
+  background: url(../images/icon-01.png) no-repeat left center;
+}
+
+.view-accommodation-service-providers-listings .views-widget-sort-by {
+  display:none !important;
+}
+
+/* All service provider CLOSE */
+
+.views-exposed-widgets {
+  text-align: right;
+  background:#f5f5f5;
+  padding:2px 20px 12px 20px;
+  border:1px solid #e2e2e2;
+  margin-top:15px;
+  font-style:normal;
+}
+
+.views-exposed-form .views-exposed-widget {
+  display: inline-block;
+  text-align: left;
+  float:none;
+  padding:0.5em 0 0 1em;
+}
+
+.lt-ie8 .views-exposed-form .views-exposed-widget {
+  display:inline;
+}
+
+.views-exposed-form .views-submit-button {
+  padding-right:0;
+}
+
+.views-exposed-form .views-submit-button input {
+  margin-right:0;
+}
+
+.views-exposed-form .views-exposed-widget label {
+  display: inline-block;
+  color:#828282;
+}
+
+.lt-ie8 .views-exposed-form .views-exposed-widget label {
+  display:inline;
+}
+
+.views-exposed-form .views-exposed-widget .views-widget {
+  display: inline-block;
+}
+
+.lt-ie8 .views-exposed-form .views-exposed-widget .views-widget {
+  display: inline;
+}
+
+.views-exposed-form .views-exposed-widget input.form-submit {
+  margin-top:0;
+}
+
+.views-exposed-form .views-exposed-widget select {
+  min-width:100px;
+}
+
+.views-exposed-widgets a.ui-selectmenu {
+  width:auto !important;
+}
+
+/* Make reservation */
+body.page-make-reservation h1#page-title {
+  text-align:center;
+  margin:0 auto;
+  background:url(../images/searchblock-bg.gif);
+  width:323px;
+  padding-top:10px;
+}
+
+body.page-make-reservation #kowrie-invoice-payment-room-booking-form {
+  width:301px;
+  background:url(../images/searchblock-bg.gif);
+  padding:11px;
+  margin:auto;
+}
+
+body.page-make-reservation #kowrie-invoice-payment-room-booking-form .start-date,
+body.page-make-reservation #kowrie-invoice-payment-room-booking-form .end-date {
+  margin-right:0;
+  float:none;
+}
+
+body.page-make-reservation #kowrie-invoice-payment-room-booking-form .start-date .form-item,
+body.page-make-reservation #kowrie-invoice-payment-room-booking-form .end-date .form-item {
+  padding-bottom:3px;
+  float:none;
+}
+
+body.page-make-reservation #kowrie-invoice-payment-room-booking-form h2.block-title {
+  text-transform:uppercase;
+  margin-bottom:10px;
+}
+
+body.page-make-reservation #kowrie-invoice-payment-room-booking-form label {
+  float:left;
+  padding:7px 0 6px 12px;
+  width:102px;
+  font-size:15px;
+  font-weight:bold;
+  line-height:22px;
+  background:url(../images/labelbg.png) no-repeat right center;
+  color:#ffffff;
+  text-shadow:1px 1px #000000;
+  position:relative;
+  margin-right:-5px;
+  z-index:1;
+}
+
+body.page-make-reservation #kowrie-invoice-payment-room-booking-form label span {
+  color:#ffffff;
+}
+
+body.page-make-reservation #kowrie-invoice-payment-room-booking-form .date-padding {
+  float:left;
+  width:190px;
+  padding:0;
+}
+
+body.page-make-reservation #kowrie-invoice-payment-room-booking-form .date-padding label {
+  display:none;
+}
+
+body.page-make-reservation #kowrie-invoice-payment-room-booking-form .form-item {
+  display:block;
+  margin:0;
+}
+
+body.page-make-reservation #kowrie-invoice-payment-room-booking-form input.form-text {
+  margin-right:0;
+  width:190px;
+  height:35px;
+  border:1px solid #d8d8d8;
+  border-left-width:0;
+  padding:0 36px 0 10px;
+}
+
+.lt-ie9 body.page-make-reservation #kowrie-invoice-payment-room-booking-form input.form-text {
+  padding-top:10px;
+}
+
+.lt-ie8 body.page-make-reservation #kowrie-invoice-payment-room-booking-form input.form-text {
+  width:143px;
+  height:25px;
+}
+
+body.page-make-reservation #kowrie-invoice-payment-room-booking-form .date-padding input.form-text {
+  background:#ffffff url(../images/icon-calander.gif) no-repeat 95% center;
+}
+
+body.page-make-reservation #kowrie-invoice-payment-room-booking-form select {
+  margin-right:0;
+  width:190px;
+  height:35px;
+  border:1px solid #d8d8d8;
+  border-left-width:0;
+  background:#ffffff;
+  padding-left:10px;
+}
+
+body.page-make-reservation #kowrie-invoice-payment-room-booking-form #rooms-wrapper {
+  display:none;
+}
+
+body.page-make-reservation #kowrie-invoice-payment-room-booking-form .form-actions {
+  padding-top:12px;
+  text-align:center;
+}
+
+body.page-make-reservation #kowrie-invoice-payment-room-booking-form .form-actions input {
+  margin:0;
+  background:url(../images/make-reservation.png) no-repeat left top;
+  width:200px;
+  height:37px;
+  padding:7px 0 7px 53px;
+  line-height:22px;
+  text-transform:uppercase;
+  text-shadow:1px 1px #000000;
+  text-align:left;
+}
+
+body.page-make-reservation #kowrie-invoice-payment-room-booking-form .ui-corner-all {
+  height:34px;
+}
+
+body.page-make-reservation #kowrie-invoice-payment-room-booking-form a.ui-selectmenu {
+  height:34px;
+  width:190px !important;
+}
+
+body.page-make-reservation #kowrie-invoice-payment-room-booking-form .sbHolder {
+  height:23px;
+  width: 188px;
+  line-height:24px;
+}
+
+body.page-make-reservation #kowrie-invoice-payment-room-booking-form .sbToggle {
+  min-height:34px;
+}
+
+body.page-make-reservation #kowrie-invoice-payment-room-booking-form .ui-state-default .ui-icon {
+  width:34px;
+}
+
+body.page-make-reservation #kowrie-invoice-payment-room-booking-form .ui-selectmenu-status {
+  padding-top:8px;
+}
+
+
+
+
+
+body.page-make-reservation #kowrie-room-booking-form{
+  width:301px;
+  background:url(../images/searchblock-bg.gif);
+  padding:11px;
+  margin:auto;
+}
+
+body.page-make-reservation #kowrie-room-booking-form .start-date,
+body.page-make-reservation #kowrie-room-booking-form .end-date {
+  margin-right:0;
+  float:none;
+}
+
+body.page-make-reservation #kowrie-room-booking-form .start-date .form-item,
+body.page-make-reservation #kowrie-room-booking-form .end-date .form-item {
+  padding-bottom:3px;
+  float:none;
+}
+
+body.page-make-reservation #kowrie-room-booking-form h2.block-title {
+  text-transform:uppercase;
+  margin-bottom:10px;
+}
+
+body.page-make-reservation #kowrie-room-booking-form label {
+  float:left;
+  padding:7px 0 6px 12px;
+  width:102px;
+  font-size:15px;
+  font-weight:bold;
+  line-height:22px;
+  background:url(../images/labelbg.png) no-repeat right center;
+  color:#ffffff;
+  text-shadow:1px 1px #000000;
+  position:relative;
+  margin-right:-5px;
+  z-index:1;
+}
+
+body.page-make-reservation #kowrie-room-booking-form label span {
+  color:#ffffff;
+}
+
+body.page-make-reservation #kowrie-room-booking-form .date-padding {
+  float:left;
+  width:190px;
+  padding:0;
+}
+
+body.page-make-reservation #kowrie-room-booking-form .date-padding label {
+  display:none;
+}
+
+body.page-make-reservation #kowrie-room-booking-form .form-item {
+  display:block;
+  margin:0;
+}
+
+body.page-make-reservation #kowrie-room-booking-form input.form-text {
+  margin-right:0;
+  width:190px;
+  height:35px;
+  border:1px solid #d8d8d8;
+  border-left-width:0;
+  padding:0 36px 0 10px;
+}
+
+.lt-ie9 body.page-make-reservation #kowrie-room-booking-form input.form-text {
+  padding-top:10px;
+}
+
+.lt-ie8 body.page-make-reservation #kowrie-room-booking-form input.form-text {
+  width:143px;
+  height:25px;
+}
+
+body.page-make-reservation #kowrie-room-booking-form .date-padding input.form-text {
+  background:#ffffff url(../images/icon-calander.gif) no-repeat 95% center;
+}
+
+body.page-make-reservation #kowrie-room-booking-form select {
+  margin-right:0;
+  width:190px;
+  height:35px;
+  border:1px solid #d8d8d8;
+  border-left-width:0;
+  background:#ffffff;
+  padding-left:10px;
+}
+
+body.page-make-reservation #kowrie-room-booking-form #rooms-wrapper {
+  display:none;
+}
+
+body.page-make-reservation #kowrie-room-booking-form .form-actions {
+  padding-top:12px;
+  text-align:center;
+}
+
+body.page-make-reservation #kowrie-room-booking-form .form-actions input {
+  margin:0;
+  background:url(../images/make-reservation.png) no-repeat left top;
+  width:200px;
+  height:37px;
+  padding:7px 0 7px 53px;
+  line-height:22px;
+  text-transform:uppercase;
+  text-shadow:1px 1px #000000;
+  text-align:left;
+}
+
+body.page-make-reservation #kowrie-room-booking-form .ui-corner-all {
+  height:34px;
+}
+
+body.page-make-reservation #kowrie-room-booking-form a.ui-selectmenu {
+  height:34px;
+  width:190px !important;
+}
+
+body.page-make-reservation #kowrie-room-booking-form .sbHolder {
+  height:23px;
+  width: 188px;
+  line-height:24px;
+}
+
+body.page-make-reservation #kowrie-room-booking-form .sbToggle {
+  min-height:34px;
+}
+
+body.page-make-reservation #kowrie-room-booking-form .ui-state-default .ui-icon {
+  width:34px;
+}
+
+body.page-make-reservation #kowrie-room-booking-form .ui-selectmenu-status {
+  padding-top:8px;
+}
+
+
+/* Make reservation CLOSE */
+
+ul.pager {
+  text-align:right;
+}
+
+ul.pager li {
+  list-style:none;
+  display:inline-block;
+  margin-bottom:4px;
+}
+
+ul.pager li select {
+  width:100px;
+}
+
+ul.pager li.pager-pages {
+  position:relative;
+  top:-2px;
+  text-align:left;
+  width:85px;
+}
+
+ul.pager li.pager-pages #kowrie-misc-pager-form,
+ul.pager li.pager-pages div {
+  width:83px;
+  height:21px;
+}
+
+ul.pager li.pager-pages a.ui-selectmenu {
+  height:auto;
+}
+
+ul.pager .ui-selectmenu-status {
+  padding-top:6px;
+  padding-bottom:6px;
+}
+
+ul.pager li.pager-pages .sbHolder {
+  top:5px;
+}
+
+ul.pager li .form-item {
+  margin:0;
+  display:inline;
+}
+
+ul.pager li.pager-first,
+ul.pager li.pager-previous,
+ul.pager li.pager-next,
+ul.pager li.pager-last {
+  border: 1px solid #D8D8D8;
+  background:#fbfbfb;
+}
+
+ul.pager li a:link,
+ul.pager li a:visited {
+  font-size:15px;
+  color:#828282;
+  font-style:italic;
+  padding:6px 10px 6px;
+  display:inline-block;
+}
+
+ul.pager li.pager-pages a.sbSelector:link,
+ul.pager li.pager-pages a.sbSelector:visited {
+  padding-left:0.405em;
+  padding-right:36px;
+}
+
+ul.pager li.pager-pages a:link,
+ul.pager li.pager-pages a:visited {
+  padding:0;
+}
+
+ul.pager ul.sbOptions li {
+  display:block;
+  margin-bottom:0;
+}
+
+ul.pager ul.sbOptions li a:link,
+ul.pager ul.sbOptions li a:visited {
+  padding: 7px 0 7px 3px;
+  display:block;
+}
+
+.view-accommodation-service-providers-listings ul.pager {
+  float:right;
+}
+
+.view-accommodation-service-providers-listings h2 + .item-list {
+  margin-top:-18px;
+  position:relative;
+}
+
+.view-accommodation-service-providers-listings .view-content + h2 + .item-list {
+  margin-top:0;
+}
+
+.view-top-hi-username {
+  border-right: 1px solid #C41E1F;
+  font-weight: bold;
+  padding-bottom: 8px;
+  padding-right: 14px;
+  padding-top: 10px;
+}
+
+
+#views-form-company-users-listing-page {
+  padding-bottom:30px;
+}
+
+#views-form-company-users-listing-page td {
+  max-width:133px;
+  white-space:normal;
+}
+#views-form-company-users-listing-page #edit-select {
+    border: none;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+	right:0;
+	width:100%;
+	text-align:right;
+}
+
+#views-form-company-users-listing-page #edit-select legend {
+  display:none;
+}
+
+.view-company-users-listing .view-content,
+.view-commerce-backoffice-orders .view-content {
+  overflow:auto;
+  padding-bottom:10px;
+  position:relative;
+}
+
+.view-company-users-listing .view-content table,
+.view-commerce-backoffice-orders .view-content table {
+  margin-bottom:0;
+}
+
+body.page-reports-accommodation-providers-list .view-company-users-listing,
+.view-commerce-backoffice-orders {
+  position:relative;
+  padding-top:30px;
+}
+
+.view-company-users-listing .feed-icon,
+.view-commerce-backoffice-orders .feed-icon {
+  position:absolute;
+  top:0;
+  left:0;
+}
+
+.view-company-users-listing .feed-icon img,
+.view-commerce-backoffice-orders .feed-icon img {
+  display:none;
+}
+
+.view-company-users-listing .feed-icon a,
+.view-commerce-backoffice-orders .feed-icon a {
+  background:url(../images/export-as-csv.gif) no-repeat left top;
+  width:111px;
+  height:27px;
+  display:block;
+}
+
+.reports-export a {
+  background:#C10001;
+  width:111px;
+  height:27px;
+  display:block;
+  color: #ffffff;
+  text-align:center;
+  line-height:28px;
+  text-decoration:none;
+  font-size:14px;
+}
+
+.view-commerce-backoffice-orders .view-content table {
+  margin:0;
+}
+
+.view-commerce-backoffice-orders .views-field-commerce-customer-address {
+  min-width:130px;
+}
+
+/* reports tab */
+ul#report-list {
+  margin:0;
+  padding:0;
+}
+
+ul#report-list li {
+  list-style:none;
+  display:inline-block;
+  margin-bottom:5px;
+}
+
+ul#report-list li a {
+  background:url(../images/buttonbg.gif) repeat-x left bottom;
+  border:none;
+  color:#ffffff;
+  text-transform:uppercase;
+  font-style:normal;
+  padding:7px 10px 5px 10px;
+  margin-right:5px;
+  display:inline-block;
+}
+/* reports tab CLOSE */
+
+/* rates and charges */
+.view-rates-charges .view-header a {
+    background: url(../images/buttonbg.gif) repeat-x left bottom;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-style: normal;
+    padding: 7px 7px 5px;
+    text-transform: uppercase;
+}
+
+.group-rates-charges .form-item {
+  clear:both;
+}
+
+.group-rates-charges label,
+.field-group-format-wrapper .field-label {
+    float: left;
+    font-weight: normal;
+    margin-right: 0;
+    padding-right: 12px;
+    width: 110px;
+}
+
+.group-rates-charges input.form-text,
+.field-group-format-wrapper.field-items {
+  width:200px;
+}
+
+.group-rates-charges .description {
+  padding-left:122px;
+  width:200px;
+}
+
+/* rates and charges CLOSE */
+
+#user-roles .edit-name .form-item {
+  margin:0 1em 5px 0;
+}
+
+#user-roles .edit-name input {
+  margin-top:0;
+}
+
+#shortcut-set-switch .form-item-new {
+  padding-left:0;
+}
+
+/* maintenance page */
+
+.maintenance-page #page {
+  max-width:748px;
+  margin:auto;
+  padding:10px;
+}
+
+.maintenance-page #main {
+  background:none;
+  padding:0;
+}
+
+.maintenance-page #page-title {
+  margin-bottom:0.3em;
+}
+
+/* maintenance page - CLOSE */
+
+.webform_report {
+  overflow:auto;
+  margin-bottom:20px;
+  padding-bottom:15px;
+}
+
+.webform_report table {
+  margin-bottom:0;
+  width:100%;
+}
+
+.webform-submission .form-item label {
+  display:inline-block;
+  padding:0 5px 0 0 ;
+}
+
+#field-ui-field-overview-form #field-display-overview-wrapper {
+  overflow:auto;
+}
+
+#user-admin-permissions {
+  overflow:auto;
+}
+
+/* responsive menu */
+#rm-removed-select {
+  display:none;
+}
+
+.responsive-menus.responsified span.toggler {
+    background:url("../images/navbg.gif") repeat center center;
+	box-shadow: 0 0 2px #a4a4a4;
+	color:#000000;
+	padding:5px 0;
+	text-shadow: 1px 1px #FFFFFF;
+}
+
+.region-navigation .responsive-menus.responsified span.toggler {
+  background:url("../images/headertop-bg.gif") repeat center center;
+  color:#ffffff;
+  text-shadow: 1px 1px #000000;
+}
+
+.responsive-menus.responsified.responsive-toggled.absolute .responsive-menus-simple {
+  top:31px;
+}
+
+.responsive-menus.responsified .responsive-menus-simple {
+    background:#e6e6e6;
+	box-shadow: 0 0 2px #a4a4a4;
+}
+
+.region-navigation  .responsive-menus.responsified .responsive-menus-simple {
+    background:#a80001;
+}
+
+.responsive-menus.responsified .responsive-menus-simple li {
+  text-align:left;
+}
+
+.responsive-menus.responsified .responsive-menus-simple li a {
+  color:#000000;
+  text-shadow: 1px 1px #FFFFFF;
+  padding-top:5px;
+  padding-bottom:5px;
+  text-transform: capitalize;
+}
+
+.region-navigation .responsive-menus.responsified .responsive-menus-simple li a {
+  color:#ffffff;
+  text-shadow: 1px 1px #000000;
+}
+
+.responsive-menus.responsified .responsive-menus-simple li ul {
+    background:#d4d4d4;
+}
+
+.responsive-menus.responsified .responsive-menus-simple li ul ul {
+    background:#ececec;
+}
+
+.responsive-menus.responsified .responsive-menus-simple li ul li a {
+	padding:5px 7% !important;
+	background-position:12px 12px;
+}
+
+.responsive-menus.responsified .responsive-menus-simple li ul li span.nolink {
+	padding:5px 5%;
+	display:block;
+	color:#333333;
+	text-shadow: 1px 1px #FFFFFF;
+}
+
+/* responsive menu CLOSE */
+
+#invoice-product-node-form #edit-domain {
+  display:none;
+}
+
+body.page-admin-structure-taxonomy-profile-category #taxonomy-form-term #edit-relations {
+  display:none;
+}

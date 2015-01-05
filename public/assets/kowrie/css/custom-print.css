@@ -1,0 +1,64 @@
+body {
+padding : 0;
+margin : 0;
+color : #000000;
+font-family : 'Merriweather Sans', sans-serif;
+line-height : 150%;
+font-size : 13px;
+}
+h1 {
+font-size : 2em;
+margin-top : 0;
+margin-bottom : 0;
+color : #000000;
+}
+h2 {
+font-size : 15px;
+margin-top : 0;
+margin-bottom : 0;
+color : #000000;
+}
+h3 {
+font-size : 13px;
+margin-top : 0;
+margin-bottom : 0;
+color : #000000;
+}
+a:link, a:visited {
+color : #c10001;
+text-decoration : none;
+}
+table {
+border-collapse : collapse;
+border-spacing : 0;
+margin-top : 1.5em;
+margin-bottom : 1.5em;
+width : 100%;
+}
+table thead {
+background : #C10001;
+color : #ffffff;
+text-align : left;
+}
+table thead a:link, table thead a:visited {
+color : #ffffff;
+}
+table tr.odd {
+background : #f0ece7;
+}
+table tr.even {
+background : #ffffff;
+}
+table tr td.active {
+background : none;
+}
+th, td {
+padding : 3px;
+text-align : left;
+}
+hr {
+display : none;
+}
+.print-site_name, .print-breadcrumb {
+display : none;
+}

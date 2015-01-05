@@ -1,0 +1,1159 @@
+@media only screen and (max-device-width : 1024px) {
+  html body.admin-menu {
+    margin-top: 54px !important;
+  }  
+}
+
+@media all and (max-width: 959px) {
+  .site-width {
+    width:auto;
+	margin:0 10px;
+  }
+ 
+  .header-left {
+    float:none;
+	margin:auto;
+  }
+  
+  .header-inner .site-width,
+  #navigation .site-width  {
+    margin:0;
+  }
+  
+  .region-navigation .block-jump-menu {
+    display:block;
+	padding:5px 0;
+  }
+  
+  .form-item-jump select.ctools-jump-menu-select {
+    display:block !important;
+  }
+  
+  .form-item-jump .ui-selectmenu {
+    display:none !important;
+  }
+  
+  /* front page content */
+  .view-kowrie-home-page-content-block .views-row {
+    width: 30%;
+	padding: 2% 2% 0;
+  }
+  
+  .view-kowrie-home-page-content-block .views-row-first {
+    padding-left:0;
+  }
+  
+  .view-kowrie-home-page-content-block .views-row-last {
+    padding-right:0;
+  }
+  
+  /* register form */
+  form[id*="user-register-form"] label {
+    float:none;
+	padding-right:0;
+	width:auto;
+	text-align:left;
+  }
+  
+  form[id*="user-register-form"] input.form-text,
+  form[id*="user-register-form"] .form-textarea-wrapper,
+  form[id*="user-register-form"] select  {
+    max-width:350px;
+	width:99%;
+  }
+  
+  form[id*="user-register-form"] .sbHolder {
+    max-width:350px;
+	width:99%;
+  }
+  
+  form[id*="user-register-form"] .field-name-field-kowrie-member,
+  form[id*="user-register-form"] fieldset,
+  form[id*="user-register-form"] .description  {
+    padding-left:0;
+  }
+  
+  form[id*="user-register-form"] .buttons {
+    text-align:left;
+  }
+  
+  
+  #block-menu-menu-kowrie-left-dashboard ul.menu {
+    display:block;
+  }
+  
+  #block-menu-menu-kowrie-left-dashboard .tinynav-wrapper {
+    display:none;
+  }
+  
+  /* reservation search - front page */
+  #block-kowrie-invoice-payment-rooms-availability-search-custom {
+    padding:10px 0;
+	float:left;
+	width:100%;
+	min-height:20px;
+  }
+  
+  #block-kowrie-invoice-payment-rooms-availability-search-custom label {
+    float:left;
+    padding:7px 0 6px 12px;
+    width:102px;
+    font-size:15px;
+    font-weight:bold;
+    line-height:22px;
+    background:url(../images/labelbg.png) no-repeat right center;
+    color:#ffffff;
+    text-shadow:1px 1px #000000;
+    position:relative;
+    margin-right:-5px;
+    z-index:1;
+  }
+  
+  #block-kowrie-invoice-payment-rooms-availability-search-custom .start-date,
+  #block-kowrie-invoice-payment-rooms-availability-search-custom .end-date,
+  #block-kowrie-invoice-payment-rooms-availability-search-custom .rooms-wrapper,
+  #block-kowrie-invoice-payment-rooms-availability-search-custom .form-item-province {
+    float:left;
+    margin-right:5px;
+  }
+  
+  #block-kowrie-invoice-payment-rooms-availability-search-custom .form-actions {
+    float:none;
+    padding-top:12px;
+	width:130px;
+	clear:both;
+	margin:0 auto;
+  }
+  
+  #block-kowrie-invoice-payment-rooms-availability-search-custom .date-padding {
+    width:auto;
+  }
+  
+  #block-kowrie-invoice-payment-rooms-availability-search-custom input.form-text {
+    width:182px;
+  }
+  
+  /* reservatopm search - inner pages */
+  #block-kowrie-invoice-payment-rooms-search-all-pages h2.block-title {
+    float:none;
+	padding:0 0 8px 0;
+  }
+  
+  #block-kowrie-invoice-payment-rooms-search-all-pages form {
+    float:none;
+  }
+  
+  #block-kowrie-invoice-payment-rooms-search-all-pages select {
+    width:141px;
+  }
+  
+  #block-kowrie-invoice-payment-rooms-search-all-pages a.ui-selectmenu,
+  #block-kowrie-invoice-payment-rooms-search-all-pages .sbHolder  {
+    width:141px;
+  }
+  
+  #block-kowrie-invoice-payment-rooms-search-all-pages .form-actions {
+    clear: both;
+    float: none;
+    margin: auto;
+    padding-top: 10px;
+    width: 130px;
+  }
+  
+  #block-block-3 {
+    float:none;
+  }
+  
+  #block-nodeblock-11,
+  #block-nodeblock-15,
+  #block-nodeblock-6 {
+    width:232px;
+	padding: 17px 11px 0 14px;
+	min-height:413px;
+  }
+}
+
+@media all and (max-width: 768px) {
+ 
+  .cke_skin_kama .cke_toolbox {
+    width:600px !important;
+  }
+  
+  ul.about-address {
+    clear:both;
+	float:left;
+	width:100%;
+  }
+  
+  ul.about-address li {
+    width:50%;
+	float:left;
+  }
+  
+  .header-top {
+    padding:5px 0;
+  }
+  
+  .tinynav-wrapper {
+    display:block;
+  }
+  
+  .header-top .block .tinynav-wrapper {
+    display:none;
+  }
+  
+ /* responsive menu */
+  .responsive-menus {
+    margin: auto;
+    max-width: 300px;
+  }
+  
+  div.contextual-links-wrapper {
+    display:none !important;
+  }
+  
+  .header-top .block {
+    float:none;
+	clear:both;
+	display:block;
+  }
+  
+  #page .header-top .block ul.menu {
+	display:block;
+  }
+  
+  #content {
+    clear:both;
+  }
+  
+  .content-inner {
+    padding-left:10px;
+	padding-right:10px;
+  }
+  
+  /* sidebar */
+  .sidebars {
+    clear:both;
+	border-top:1px solid #dadada;
+	margin-top:20px;
+	padding-top:10px;
+	float:left;
+	width:100%;
+  }
+  
+  .sidebar-first .content-inner {
+    padding-left:10px;
+	padding-right:10px;
+	margin-left:0;
+	border-left:none;
+  }
+
+  .sidebar-first .region-sidebar-first,
+  .two-sidebars .region-sidebar-first {
+    float:none;
+    width:auto;
+    padding-left:0;
+	margin:0;
+  }
+
+  .sidebar-second .content-inner {
+    padding-right:0;
+  }
+
+  .sidebar-second .region-sidebar-second,
+  .two-sidebars .region-sidebar-second {
+   float:none;
+   width:auto;
+   padding-right:0;
+  }	
+
+  .two-sidebars .content-inner {
+    padding:0;
+  }
+  
+  .sidebar-first .content-main-inner {
+    background:none;
+  }
+  
+  /* register form */
+  form[id*="user-register-form"] label {
+    float:left;
+	padding-right:20px;
+	width:250px;
+	text-align:right;
+  }
+  
+  form[id*="user-register-form"] input.form-text,
+  form[id*="user-register-form"] .form-textarea-wrapper,
+  form[id*="user-register-form"] select  {
+    max-width:300px;
+  }
+  
+  form[id*="user-register-form"] .sbHolder {
+    max-width:300px;
+  }
+
+  form[id*="user-register-form"] .field-name-field-kowrie-member,
+  form[id*="user-register-form"] fieldset,
+  form[id*="user-register-form"] .description  {
+    padding-left:270px;
+  }
+  
+  form[id*="user-register-form"] .buttons {
+    text-align:center;
+  }  
+  
+  /* reservation search - front page */
+  
+  #block-kowrie-invoice-payment-rooms-availability-search-custom h2.block-title {
+    text-align:center;
+  }
+  
+  
+  #block-kowrie-invoice-payment-rooms-availability-search-custom .start-date {
+    padding-left:62px;
+  }
+
+  #block-kowrie-invoice-payment-rooms-availability-search-custom .form-type-select {
+    padding-left:62px;
+  }
+  
+  #block-kowrie-invoice-payment-rooms-availability-search-custom .form-actions {
+    clear:none;
+	float:left;
+	padding-top:0;
+  }
+  
+  /* reservatopm search - inner pages */
+  #block-kowrie-invoice-payment-rooms-search-all-pages h2.block-title {
+    float:none;
+	padding:0 0 8px 0;
+	text-align:center;
+  }
+  
+  #block-nodeblock-11,
+  #block-nodeblock-15,
+  #block-nodeblock-6 {
+    width:220px;
+	min-height:450px;
+  }
+  
+  /* all services provices */
+  .view-accommodation-service-providers-listings .views-field-field-description {
+    padding-left:225px;
+  }
+
+  /* expose form */
+  .views-exposed-form .views-exposed-widget label {
+    display:block;
+  }
+  
+  /* pager */
+  ul.pager li.pager-pages .sbHolder {
+    top:1px;
+  }
+  /* pager close */
+  
+  /* maintenance page */
+
+  .maintenance-page #page {
+    text-align:center;
+  }
+  
+  /* maintenance page - CLOSE */
+  
+  #field-display-overview-wrapper {
+    overflow:auto;
+  }
+  
+}
+
+@media all and (max-width: 767px) {
+  html body.admin-menu {
+    margin-top: 78px !important;
+  }
+  
+  table.sticky-header {
+    display:none;
+  }
+  
+  .cke_skin_kama .cke_toolbox {
+    width:auto !important;
+  }
+  
+  .form-managed-file .form-file, .form-managed-file .form-submit {
+    margin-bottom:5px;
+  }
+    
+  .region-navigation {
+    padding-left:10px;
+	padding-right:10px;
+  }
+  
+  .logged-in #page .header-top .block ul.menu {
+    display:none;
+  }
+  
+  .header-top ul.menu {
+    padding-right:0;
+	float:none;
+	text-align:center;
+  }
+  
+  .header-top ul.menu li {
+    padding: 0 8px;
+	margin:0 -2px;
+	float:none;
+	display:inline-block;
+  }
+  
+  .logged-in .header-top .block .tinynav-wrapper {
+    display:block;
+  }
+  
+  .view-top-hi-username {
+    border-right:none;
+	text-align:center;
+	padding-right:0;
+  }
+  
+  /* front page content */
+  .view-kowrie-home-page-content-block .views-row {
+    width: auto;
+	padding: 2% 0 12px;
+	float:none;
+	border-right:none;
+	border-bottom:1px solid #E5E5E5;
+	margin-bottom:12px;
+	min-height:100px;
+  }
+  
+    .view-kowrie-home-page-content-block .views-row-last {
+	  margin-bottom:0;
+	  padding-bottom:0;
+	  border-bottom:none;
+	}
+	
+    
+  /* reservation search - front page */
+  
+  #block-kowrie-invoice-payment-rooms-availability-search-custom form {
+    width:306px;
+	margin:auto;
+  }
+  
+  #block-kowrie-invoice-payment-rooms-availability-search-custom .start-date {
+    padding-left:0;
+	margin-right:0;
+  }
+  
+  #block-kowrie-invoice-payment-rooms-availability-search-custom .end-date {
+	margin-right:0;
+  }
+
+  #block-kowrie-invoice-payment-rooms-availability-search-custom .form-type-select {
+    padding-left:0;
+	margin-right:0;
+  }
+  
+  #block-kowrie-invoice-payment-rooms-availability-search-custom .form-actions {
+    clear:both;
+	float:left;
+	padding-top:12px;
+  }
+  
+  #block-kowrie-invoice-payment-rooms-availability-search-custom input.form-text {
+    width: 193px;
+  }
+  
+  #block-kowrie-invoice-payment-rooms-availability-search-custom .form-actions {
+    float:none;
+  }
+  
+  /* reservatopm search - inner pages */
+  #block-kowrie-invoice-payment-rooms-search-all-pages .form-actions {
+    clear: none;
+    float: left;
+    margin: 0;
+    padding-top: 0px;
+    width: 130px;
+  }
+  
+  
+  #block-kowrie-invoice-payment-rooms-search-all-pages .start-date {
+    padding-left:66px;
+  }
+  
+  #block-kowrie-invoice-payment-rooms-search-all-pages .form-type-select {
+    padding-left:90px;
+  }
+  
+  #block-nodeblock-11,
+  #block-nodeblock-15,
+  #block-nodeblock-6 {
+    width:auto;
+	float:none;
+	min-height:10px;
+	margin-bottom:12px;
+	padding:0;
+	border:none;
+  }
+  
+  /* all services provices */
+  .view-accommodation-service-providers-listings .views-field-field-description {
+    padding-left:0;
+  }
+  
+  /* invoice */
+  .invoice-header-left,
+  .invoice-header-right-td  {
+    width:50%;
+  }
+  
+  .invoice-header-left-data {
+    display:block;
+	width:auto;
+	clear:both;
+  }
+  /* invoice CLOSE */
+
+  /* checkout CLOSE */
+ 
+ .views-exposed-widgets {
+   text-align:left;
+ }
+ 
+ .views-exposed-form .views-exposed-widget {
+   padding-left:0;
+   padding-right:10px;
+ }
+ 
+ .node-invoice-form .invoice-items {
+    overflow:auto;
+	width:578px;
+  }
+  
+  .page-admin-config-people-accounts .content-inner {
+    overflow:hidden;
+  }
+ 
+}
+
+
+@media all and (max-width: 639px) {
+  
+ .tabs-primary, .tabs-secondary {
+   white-space: normal;
+ }
+ 
+ body.page-user-login .content-inner {
+   width:auto;
+   max-width:80%;
+ }
+ 
+ #user-login label {
+   float:none;
+   width:auto;
+   text-align:center;
+ }
+ 
+ #user-login input.form-text {
+   margin:auto;
+   display:block;
+ }
+ 
+ #user-login .description {
+   padding-left:0;
+   text-align:center;
+ }
+ 
+ .page-user-login .tabs-primary li,
+ .page-user-login .tabs-primary li.active {
+   display:block;
+ }
+ 
+ .page-user-login .tabs-primary li a,
+ .page-user-login .tabs-primary li a.active {
+   display:block;
+ }
+ 
+ .region-footer-messages .block-menu {
+    display:block;
+  }
+  
+  .region-footer-messages ul.menu li {
+    padding-left:0;
+	padding-right:4px;
+  }
+  
+  ul.about-address li {
+    width:100%;
+	float:none;
+  }
+  
+  /* register form */
+  form[id*="user-register-form"] label {
+    float:none;
+	padding-right:0;
+	width:auto;
+	text-align:left;
+  }
+  
+  form[id*="user-register-form"] input.form-text,
+  form[id*="user-register-form"] .form-textarea-wrapper,
+  form[id*="user-register-form"] select  {
+    max-width:99%;
+  }
+  
+  form[id*="user-register-form"] .sbHolder {
+    max-width:99%;
+  }
+  
+  form[id*="user-register-form"] .field-name-field-kowrie-member,
+  form[id*="user-register-form"] fieldset,
+  form[id*="user-register-form"] .description  {
+    padding-left:0;
+	max-width:100%;
+  }
+  
+  form[id*="user-register-form"] .buttons {
+    text-align:center;
+  }
+  
+  /* reservation search - front page */
+  
+  #block-kowrie-invoice-payment-rooms-availability-search-custom form {
+    width:259px;
+  }
+  
+  #block-kowrie-invoice-payment-rooms-availability-search-custom input.form-text {
+    width: 150px;
+  }
+  
+  #block-kowrie-invoice-payment-rooms-availability-search-custom select {
+    width:147px;
+  }
+  
+  #block-kowrie-invoice-payment-rooms-availability-search-custom .sbHolder {
+    width:147px;
+  }
+  
+  /* reservatopm search - inner pages */
+  #block-kowrie-invoice-payment-rooms-search-all-pages form {
+    float: none;
+    margin: auto;
+    width: 284px;
+  }
+  
+  #block-kowrie-invoice-payment-rooms-search-all-pages .form-item {
+    margin-right:0;
+  }
+  
+  #block-kowrie-invoice-payment-rooms-search-all-pages .start-date {
+    padding-left:0;
+	float:none;
+  }
+  
+  #block-kowrie-invoice-payment-rooms-search-all-pages .end-date {
+    padding-left:0;
+	float:none;
+  }
+  
+  #block-kowrie-invoice-payment-rooms-search-all-pages .form-type-select {
+    padding-left:0;
+	float:none;
+  }
+  
+  #block-kowrie-invoice-payment-rooms-search-all-pages .form-type-select a.ui-selectmenu {
+    width:169px !important;
+  }
+  
+  #block-kowrie-invoice-payment-rooms-search-all-pages .form-actions {
+    clear: both;
+    float: none;
+    margin: auto;
+    padding-top: 10px;
+    width: 130px;
+  }
+  
+  #block-kowrie-invoice-payment-rooms-search-all-pages input.form-text {
+    width:171px;
+  }
+  
+  #block-kowrie-invoice-payment-rooms-search-all-pages select {
+    width:169px;
+  }
+  
+  #block-kowrie-invoice-payment-rooms-search-all-pages .sbHolder {
+    width:169px;
+  }
+  
+  /* Making A Reservation */
+  .room_logo {
+    float:none;
+	padding-right:0;
+	text-align:center;
+  }
+  
+  .room_logo img {
+    margin:0 auto 12px;
+  }
+  
+  .room_name {
+    clear:both;
+	text-align:center;
+  }
+  
+  .room_description {
+    text-align:center;
+  }
+  
+  .room_read_more {
+    float:none;
+	text-align:center;
+	padding-bottom:5px;
+  }
+  
+  .room_make_reservation {
+    float:none;
+	text-align:center;
+  }
+  
+  /* All service providers */
+  .view-accommodation-service-providers-listings .views-field-field-company-logo-image {
+    float:none;
+	padding-right:0;
+	text-align:center;
+  }
+  
+  .view-accommodation-service-providers-listings .views-field-field-company-logo-image img {
+    margin:0 auto 12px;
+  }
+  
+  .view-accommodation-service-providers-listings .views-field-field-company-name {
+    clear:both;
+	text-align:center;
+  }
+  
+  .view-accommodation-service-providers-listings .views-field-field-description {
+    text-align:center;
+  }
+  
+  .readmore {
+    float:none;
+	text-align:center;
+	padding-bottom:5px;
+  }
+  
+  .make_reservation {
+    float:none;
+	text-align:center;
+  }
+  
+  /* common CSS of webform client form */
+  .webform-client-form label {
+	padding-right:3%;
+	width:150px;
+  }
+  
+  .webform-client-form input.form-text {
+	max-width: 53%;
+  }
+  
+  .webform-client-form .form-radios {
+	max-width: 53%;
+  }
+  
+  .webform-client-form .form-textarea-wrapper {
+	max-width: 53%;
+  }
+  
+  .webform-client-form .description {
+    padding-left:0;
+	text-align:center;
+  }
+  
+  .webform-client-form .user-register-reset {
+    padding-left:0;
+  }
+  
+  .webform-client-form .form-actions {
+    text-align:center;
+	padding-left:0;
+  }
+  
+  .webform-client-form fieldset.captcha {
+    padding-left:165px;
+  }
+  
+  /* common CSS of webform client form CLOSE */
+ 
+ #views-form-company-users-listing-page {
+    padding-bottom: 70px;
+ }
+ 
+  /* pager */
+  ul.pager {
+    text-align:center;
+  }
+  
+  ul.pager li {
+    padding-left:0;
+	padding-right:0;
+  }
+  
+  .view-accommodation-service-providers-listings ul.pager {
+    float:none;
+  }
+  
+  /* invoice */
+  
+  #user-invoices-filter-form {
+    text-align:center;
+  }
+  
+  #user-invoices-filter-form .form-item {
+    display:block;
+	text-align:center;
+  }
+  
+  #user-invoices-filter-form .form-item .ui-selectmenu {
+    text-align:left;
+  }
+  
+  .invoice-header-left,
+  .invoice-header-right-td  {
+    width:100%;
+	display:block;
+  }
+  
+  .invoice-footer-left {
+    width:100%;
+	padding-bottom:10px;
+  }
+  
+  .invoice-footer-right {
+    width:100%;
+	text-align:left;
+  }
+  
+  
+  /* invoice CLOSE */
+  
+ /* user profile */
+  #user-profile-form label {
+	padding-right:3%;
+	width:150px;
+  }
+  
+  #user-profile-form .image-widget {
+    clear: none;
+    float: left;
+    width: 231px;
+  }
+  
+  .password-strength, div.password-confirm {
+    padding-left: 163px;
+	width:auto;
+  }
+    
+  #user-profile-form input.form-text {
+	max-width: 53%;
+  }
+  
+  #user-profile-form select {
+	max-width: 53%;
+  }
+  
+  #user-profile-form .ui-selectmenu {
+    width:231px !important;
+  }
+  
+  #user-profile-form .form-radios,
+  #user-profile-form .form-checkboxes,
+  #user-profile-form .form-textarea-wrapper {
+	max-width: 53%;
+  }
+  
+  #user-profile-form .form-type-checkbox {
+  	max-width: 53%;
+	padding-left:150px;
+  }	
+  
+  #user-profile-form .form-item-htmlmail-plaintext {
+    max-width:100%;
+	padding-left:0;
+  }
+  
+  #user-profile-form .description {
+    padding-left:163px;
+  }
+
+  #user-profile-form .password-suggestions {
+    padding-left:5px;
+    margin-left:163px;
+  }
+  
+  #user-profile-form .form-type-checkbox {
+    padding-left:163px;
+  }
+  
+  #user-profile-form .form-actions {
+    padding-left:0;
+	text-align:center;
+  }
+  
+  #user-profile-form #edit-mimemail {
+    padding-left:8px;
+	padding-right:8px;
+	margin-left:163px;
+  }
+  
+  #user-profile-form #edit-mimemail .description {
+    text-align:left;
+  }
+  
+  .password-suggestions {
+    padding-left:8px;
+	padding-right:8px;
+  }
+  
+  .profile .field-label {
+  	padding-right:3%;
+	width:150px;
+  }
+  
+  .profile .field-name-field-description .field-items {
+    padding-left:160px;
+  }
+  
+/* user profile CLOSE */
+  /* text editor */
+  table.cke_editor {
+    width:400px;
+  }
+
+  .cke_skin_kama .cke_toolgroup {
+    background:#ffffff;
+    width: 400px;
+  }
+  
+  .cke_skin_kama .cke_toolgroup span {
+    float:left;
+  }
+  
+  .cke_skin_kama .cke_toolbox {
+    width:400px !important;
+  }
+  
+  .node-invoice-form .invoice-items {
+	width:418px;
+  }
+  
+  #navigation div.contextual-links-wrapper {
+    left:0;
+	top:-15px;
+  }
+  
+  #user-invoices-form {
+    overflow:auto;
+  }
+  
+  #user-admin-settings input.form-text {
+    max-width:240px;
+  }
+  
+}
+
+@media all and (max-width: 479px) {
+  html body.admin-menu {
+    margin-top: 110px !important;
+  }
+  
+/* common CSS of webform client form */
+  .webform-client-form label {
+	padding-right:0;
+	width:auto;
+	float:none;
+	text-align:left;
+	display:block;
+  }
+  
+  .webform-client-form input.form-text {
+	max-width: 99%;
+  }
+  
+  .webform-client-form .form-radios {
+	max-width: 99%;
+  }
+  
+  .webform-client-form .form-textarea-wrapper {
+	max-width: 99%;
+  }
+  
+  .webform-client-form select {
+    clear:both;
+	min-width: 99%;
+  }
+  
+  .webform-client-form fieldset.captcha {
+    padding-left:0;
+  }
+  
+/* common CSS of webform client form CLOSE */
+/* make reservation page */
+body.page-make-reservation h1#page-title {
+  width:auto;
+}
+
+body.page-make-reservation #kowrie-invoice-payment-room-booking-form {
+  width:auto;
+}
+
+body.page-make-reservation #kowrie-invoice-payment-room-booking-form .date-padding {
+  width:57%;
+}
+
+body.page-make-reservation #kowrie-invoice-payment-room-booking-form select {
+  width:53%;
+}
+
+body.page-make-reservation #kowrie-invoice-payment-room-booking-form .sbHolder {
+  width:53%;
+}
+
+body.page-make-reservation #kowrie-invoice-payment-room-booking-form a.ui-selectmenu {
+  width:147px !important
+}
+
+/* user profile */
+  #user-profile-form label {
+	padding-right:0;
+	width:auto;
+	float:none;
+	text-align:left;
+  }
+  
+  #user-profile-form input.form-text {
+	max-width: 99%;
+  }
+  
+  #user-profile-form select {
+	max-width: 99%;
+  }
+  
+  #user-profile-form .ui-selectmenu {
+    width:278px !important;
+  }
+  
+  #user-profile-form .form-radios,
+  #user-profile-form .form-type-checkbox,
+  #user-profile-form .form-textarea-wrapper {
+	max-width: 99%;
+  }
+  
+  #user-profile-form .form-type-checkbox {
+    padding-left:0;
+  }
+  
+  .password-strength, div.password-confirm {
+    padding-left: 0;
+  }
+  
+  .profile .field-label {
+    float:none;
+	width:auto;
+	text-align:left;
+  }
+  
+  .profile .field-name-field-description .field-items {
+    padding-left:0;
+  }
+  
+  #user-profile-form .description {
+    padding-left:0;
+  }
+  
+  #user-profile-form .password-suggestions {
+    margin-left:0;
+  }
+  
+  #user-profile-form #edit-mimemail {
+    margin-left:0;
+  }
+  
+  #user-profile-form .form-radios,
+  #user-profile-form .form-checkboxes,
+  #user-profile-form .form-textarea-wrapper {
+    max-width:100%;
+  }
+  
+/* user profile CLOSE */
+
+  /* register form */
+  form[id*="user-register-form"] a.ui-selectmenu {
+    width:99% !important;
+  }
+  /* register form CLOSE */
+  #views-form-company-users-listing-page {
+    padding-bottom:90px;
+  }
+
+  /* text editor */
+  table.cke_editor {
+    width:240px;
+  }
+  
+  .cke_skin_kama .cke_toolbar {
+      width: 240px;
+  }
+
+  .cke_skin_kama .cke_toolgroup {
+    background:#ffffff;
+    width: 240px;
+  }
+  
+  .cke_skin_kama .cke_toolgroup span {
+    float:left;
+  }
+  
+  .cke_skin_kama .cke_toolbox {
+    width:200px !important;
+  }
+  
+  .vertical-tabs .description {
+    margin-left:0 !important;
+  }
+  
+  #webform-configure-form input.form-text {
+    max-width:200px;
+  }
+  
+  .node-form input.form-text {
+    max-width:260px;
+  }
+
+  .node-invoice-form .invoice-items {
+	width:260px;
+  }
+
+}
+
+@media all and (max-width: 320px) {
+  html body.admin-menu {
+    margin-top: 122px !important;
+  }
+  .sbOptions {
+    min-width:100px;
+  }
+  
+  div.vertical-tabs {
+    margin-left:12em;
+  }
+  
+  .vertical-tabs ul.vertical-tabs-list {
+    width:12em;
+	margin-left:-12em;
+  }
+  
+}

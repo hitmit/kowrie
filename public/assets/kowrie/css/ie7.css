@@ -1,0 +1,53 @@
+.header-top .block {
+  display:inline;
+}
+
+.header-top ul.menu li {
+  display:inline;
+}
+
+#block-kowrie-invoice-payment-rooms-search-all-pages .date-padding input.form-text {
+    height:25px;
+	padding-top:8px;
+	width:74px;
+}
+
+#block-kowrie-invoice-payment-rooms-search-all-pages .form-type-select {
+  width:290px;
+}
+
+#user-invoices-filter-form .form-type-select .sbHolder {
+  display:inline;
+}
+
+ul.pager li {
+  display:inline;
+  margin-left:4px;
+}
+
+ul.pager li.pager-pages {
+  margin-right:4px;
+}
+
+.invoice-footer-left {
+  float:left;
+}
+
+.invoice-footer-right {
+  float:right;
+}
+
+.views-exposed-form .views-exposed-widget .sbHolder {
+  display:inline;
+}
+
+.views-exposed-form .views-exposed-widget {
+  margin-bottom:6px;
+}
+
+form[id*="user-register-form"] .form-textarea-wrapper {
+}
+
+form[id*="user-register-form"] .form-textarea-wrapper textarea {
+  margin-left:-260px;
+}
