@@ -123,6 +123,7 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 
 		'Ows\Domain\DomainServiceProvider',
+		'Ows\Domain\Services\Repo\BackendServiceProvider',
 
 	),
 

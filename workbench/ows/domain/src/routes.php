@@ -1,3 +1,3 @@
 <?php
 
-Route::get('domain', 'DomainsController@handleBlogListingPage');
+Route::get('domain', 'Ows\Domain\Controllers\DomainsController@handleBlogListingPage');

@@ -1,9 +1,20 @@
 <?php
+
+namespace Ows\Domain\Controllers;
+
+use Ows\Domain\Services\Repo\DomainRepositoryInterface;
+
 class DomainsController extends BaseController
 {
+    protected $domain;
 
+    function __construct(DomainRepositoryInterface $domain) {
+        $this->domain = $domain;
+        parent::__construct();
+    }
   public function handleBlogListingPage()
   {
+      print_r($this->domain->getAll());
     // get the blog posts by loading the model
     // $Blog = new Blog;
     // $blogPosts = $Blog->getBlogPost()->get();
