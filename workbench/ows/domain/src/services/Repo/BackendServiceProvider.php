@@ -13,8 +13,8 @@ class BackendServiceProvider extends ServiceProvider
 	 */
 	 public function register()
 	 {
-		$this->app->bind(
-        	'Ows\Domain\Services\Repo\DomainRepositoryInterface', 'Informatics\Auth\Services\Repo\DbDomainRepository'
+			$this->app->bind(
+        	'Ows\Domain\Services\Repo\DomainRepositoryInterface', 'Ows\Domain\Services\Repo\DbDomainRepository'
         );
 	 }
 }

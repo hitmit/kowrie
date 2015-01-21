@@ -14,7 +14,8 @@
     "autoload": {
         "classmap": [
             "src/migrations",
-            "src/controllers"
+            "src/controllers",
+            "src/services/Repo"
         ],
         "psr-0": {
             "Ows\\Domain\\": "src/"
