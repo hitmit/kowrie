@@ -4,6 +4,7 @@ namespace Ows\Domain\Controllers;
 
 use Ows\Domain\Controllers\BaseController;
 use Ows\Domain\Services\Repo\DomainRepositoryInterface;
+use View;
 
 class DomainsController extends BaseController
 {
@@ -22,7 +23,8 @@ class DomainsController extends BaseController
 
     // // setting the view with content
     // $this->layout->content = View::make('blogger::blog-list')->with('blogposts', $blogPosts);
-    print_r('hitu');
+     return View::make('domain::layout.master');
+
   }
 
   public function handleBlogSinglePage($blogId)
