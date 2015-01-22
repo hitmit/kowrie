@@ -2,6 +2,8 @@
 
 namespace Ows\Domain\Services\Repo;
 
+use \DB;
+
 class DbDomainRepository implements DomainRepositoryInterface
 {
     public function find($id)
@@ -12,7 +14,8 @@ class DbDomainRepository implements DomainRepositoryInterface
 
     public function getAll()
     {
-        return array(1,2,3,4,5);
+        $domains = DB::table('domain')->get();
+        return $domains;
     }
 
 }

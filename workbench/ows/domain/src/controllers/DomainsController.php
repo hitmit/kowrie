@@ -14,17 +14,10 @@ class DomainsController extends BaseController
         $this->domain = $domain;
         //parent::__construct();
     }
-  public function handleBlogListingPage()
+  public function getIndex()
   {
-      print_r($this->domain->find(0));
-    // get the blog posts by loading the model
-    // $Blog = new Blog;
-    // $blogPosts = $Blog->getBlogPost()->get();
-
-    // // setting the view with content
-    // $this->layout->content = View::make('blogger::blog-list')->with('blogposts', $blogPosts);
-     return View::make('domain::layout.master');
-
+      $domains = $this->domain->getAll();
+      return View::make('domain::index')->with('domains', $domains);
   }
 
   public function handleBlogSinglePage($blogId)
