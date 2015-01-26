@@ -67,8 +67,7 @@ class DomainsController extends BaseController
             // If this is the default domain, reset other domains.
             if (!empty($input['is_default']))
             {
-                $this->domain->domain_record_update(array('is_default' => 1), array('machine_name' => array($input['machine_name'], '<>')));
-                echo("<pre>"); print_R($input); die;
+                $this->domain->domain_record_update(array('is_default' => 0), array('machine_name' => array($input['machine_name'], '<>')));
             }
 
             $id = $this->domain->create($input);

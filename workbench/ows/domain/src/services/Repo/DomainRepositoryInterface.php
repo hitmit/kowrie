@@ -18,4 +18,6 @@ interface DomainRepositoryInterface
     public function domain_count_multiple_load($data = array());
 
     public function domain_record_update($update, $condition = array());
+
+    public function domain_delete($domain_id);
 }

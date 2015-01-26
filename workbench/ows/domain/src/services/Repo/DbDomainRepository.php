@@ -62,7 +62,11 @@ class DbDomainRepository implements DomainRepositoryInterface
         {
             $query->where($key,$value[1], $value[0]);
         }
-        echo "<pre>";print_r($query); die;
         $query->update($update);
+    }
+
+    public function domain_delete($domain_id)
+    {
+        DB::table('domain')->where('domain_id', '=', $domain_id)->delete();
     }
 }
