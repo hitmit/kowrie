@@ -15,7 +15,7 @@ Domains
 
 <div class="form-row">
     <div class="pull-right">
-        <a class="btn btn-primary pull-right addProjectModal" data-toggle="modal" data-target="#ProjectModal" href="{{{ URL::to('domains/create') }}}"><i class="fa fa-pencil"></i> Add Project</a>
+        <a class="btn btn-primary pull-right addDomainModal" data-toggle="modal" data-target="#DomainModal" href="{{{ URL::to('domains/create') }}}"><i class="fa fa-pencil"></i> Add Project</a>
     </div>
     <table class="table table-striped">
         <thead>
@@ -70,7 +70,7 @@ Domains
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="ProjectModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="DomainModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content" id="frmAddProject"></div>
     </div>
