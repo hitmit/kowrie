@@ -70,66 +70,9 @@ class DomainsController extends BaseController
                 $this->domain->domain_record_update(array('is_default' => 0), array('machine_name' => array($input['machine_name'], '<>')));
             }
 
-            $id = $this->domain->create($input);
+            $this->domain->create($input);
             return Redirect::route('domains')->with('message', 'Domain Created Successfully');
-            
-//            //Validation rules
-//            $varidator = array(
-//                'PackageStatus' => 'required',
-//                'PackageName' => 'required|unique:tellytouch_dat_package',
-//                'PackageTeaser' => 'required',
-//                'PackagePrice' => 'required|numeric',
-//                'PackageDescription' => 'required',
-//                'PackageMaxChannels' => 'required',
-//                'PackageLocations' => 'required',
-//                'DesignID' => 'required',
-//                'LogoImage' => 'required',
-//                'PackageImage1' => 'image|image',
-//                'PackageImage2' => 'image|image',
-//                'PackageImage3' => 'image|image',
-//                'PackageImage4' => 'image|image'
-//            );
-//            $messages = array(
-//                'DesignID.required' => 'The design field is required',
-//            );
-//            $validator = Validator::make($input, $varidator, $messages);
-//            //Validation check
-//            if (!$validator->fails())
-//            {
-//                //If Data is valid
-//                //Assign Required data
-//                $input['CreatedDate'] = date('Y-m-d H:i:s');
-//                $input['UpdatedDate'] = date('Y-m-d H:i:s');
-//                $input['UpdatedUser'] = Sentry::getUser()->id;
-//                $input['CreatedUser'] = Sentry::getUser()->id;
-//                $input['IPAddress'] = $_SERVER['REMOTE_ADDR'];
-//
-//                //path for Package images
-//                $path = public_path();
-//                $path.="/img/packages/";
-//                //'PackageImage' . $i will give the name of the image after each iteration
-//                //Like PackageImage1, PackageImage2, PackageImage3 etc.
-//                for ($i = 1; $i <= 4; $i++)
-//                {
-//                    if (Input::hasFile('PackageImage' . $i))
-//                    {
-//                        $ext = $input['PackageImage' . $i]->getClientOriginalExtension();
-//                        $upperExt = strtoupper($ext);
-//                        $imagename = $input['PackageImage' . $i]->getClientOriginalName();
-//                        $imagename = explode(".", $imagename);
-//                        $imagename = $imagename[0] . "-" . time() . "." . $ext;
-//                        Input::file('PackageImage' . $i)->move($path, $imagename);
-//                        $input['PackageImage' . $i] = $imagename;
-//                    }
-//                }
-//
-//                $this->package->create($input);
-//                return Redirect::route('packages')->with('message', 'Package Created Successfully');
-//            } else
-//            {
-//                //If data is not valid
-//                return Redirect::back()->withInput()->withErrors($validator->messages());
-//            }
+
         } catch (\Laracasts\Validation\FormValidationException $e) {
             return Redirect::back()->withInput()->withErrors($e->getErrors());
         }
