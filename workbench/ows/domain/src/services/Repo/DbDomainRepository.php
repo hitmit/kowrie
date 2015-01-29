@@ -7,10 +7,11 @@ use \DB;
 class DbDomainRepository implements DomainRepositoryInterface
 {
 
-    public function find($id)
+    public function findDomain($id)
     {
-        $array = array(7, 6, 9, 8);
-        return $array[$id];
+      $query = DB::table('domain')
+        ->where('domain_id', '=', $id);
+      return $query->first();
     }
 
     public function getAll()

@@ -7,7 +7,7 @@ interface DomainRepositoryInterface
 
     public function getAll();
 
-    public function find($id);
+    public function findDomain($id);
     
     public function domain_pagination($paginateCountValue);
     
