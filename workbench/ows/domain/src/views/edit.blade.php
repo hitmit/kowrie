@@ -1,4 +1,4 @@
-<?php echo("<pre>"); print_r($domain); echo("</pre>");
+<?php
 $http = ($domain->scheme == 'http') ? true : false;
 $https = ($domain->scheme == 'https') ? true : false;
 $active = false;
