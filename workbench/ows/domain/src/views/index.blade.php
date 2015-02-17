@@ -15,7 +15,7 @@ Domains
 
 <div class="form-row">
     <div class="pull-right">
-        <a class="btn btn-primary pull-right addDomainModal" data-toggle="modal" data-target="#DomainModal" href="{{{ URL::to('domains/create') }}}"><i class="fa fa-pencil"></i> Add Project</a>
+        <a class="btn btn-primary pull-right addDomainModal" data-toggle="modal" data-target="#DomainModal" href="{{{ URL::to('domains/create') }}}"><i class="fa fa-pencil"></i> Add Domain</a>
     </div>
     <table class="table table-striped">
         <thead>
@@ -52,7 +52,7 @@ Domains
                 <div class="dropdown">
                     <button class="btn btn-primary dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Actions<span class="caret"></span></button>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Edit</a></li>
+                        <li role="presentation"><a  role="menuitem" tabindex="-1" data-toggle="modal" data-target="#DomainModal" href="{{{ URL::to('domain/'.$domain->domain_id.'/edit') }}}">Edit</a></li>
                         <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Delete</a></li>
                     </ul>
                 </div>

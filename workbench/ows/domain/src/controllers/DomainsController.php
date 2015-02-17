@@ -20,7 +20,7 @@ class DomainsController extends BaseController
 
     public function getIndex()
     {
-        $data = $this->domain->domain_pagination(1);
+        $data = $this->domain->domain_pagination(10);
         $domains = $data['domains'];
         $pagination = $data['pagination'];
         return View::make('domain::index')->with('domains', $domains)->with('pagination', $pagination);
@@ -50,24 +50,16 @@ class DomainsController extends BaseController
     {
         try {
             $input = Input::except('_token', '_method');
-            $input['machine_name'] = $input['sitename'];
-
             $count = $this->domain->domain_count_multiple_load(array('is_default' => 1 ));
             if (!$count->count)
             {
                 $input['is_default'] = 1;
             }
 
-            // Ensure we have a machine name.
-            if (!isset($input['machine_name']))
-            {
-                $input['machine_name'] = $this->domain_machine_name($input['subdomain']);
-            }
-
             // If this is the default domain, reset other domains.
             if (!empty($input['is_default']))
             {
-                $this->domain->domain_record_update(array('is_default' => 0), array('machine_name' => array($input['machine_name'], '<>')));
+                $this->domain->domain_record_update(array('is_default' => 0));
             }
 
             $this->domain->create($input);
@@ -76,6 +68,37 @@ class DomainsController extends BaseController
         } catch (\Laracasts\Validation\FormValidationException $e) {
             return Redirect::back()->withInput()->withErrors($e->getErrors());
         }
+    }
+
+    public function editDomain($domain_id)
+    {
+     $domain = $this->domain->findDomain($domain_id);
+      return View::make("domain::edit")->with("domain", $domain);
+    }
+
+    public function update()
+    {
+      try {
+        $input = Input::except('_token', '_method');
+        $count = $this->domain->domain_count_multiple_load(array('is_default' => 1 ));
+        if (!$count->count)
+        {
+          $input['is_default'] = 1;
+        }
+
+        // If this is the default domain, reset other domains.
+        if (!empty($input['is_default']))
+        {
+          $this->domain->domain_record_update(array('is_default' => 0));
+        }
+        $domain_id = $input['domain_id'];
+        unset($input['domain_id']);
+        $this->domain->domain_record_update($input, array('domain_id' => array($domain_id, "=")));
+        return Redirect::route('domains')->with('message', 'Domain Updated Successfully');
+
+      } catch (\Laracasts\Validation\FormValidationException $e) {
+        return Redirect::back()->withInput()->withErrors($e->getErrors());
+      }
     }
 
 }
