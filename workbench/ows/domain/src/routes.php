@@ -5,3 +5,5 @@ Route::get('domains/create', 'Ows\Domain\Controllers\DomainsController@createDom
 Route::post('domains/create', 'Ows\Domain\Controllers\DomainsController@create');
 Route::get('domain/{domain_id}/edit', 'Ows\Domain\Controllers\DomainsController@editDomain');
 Route::post('domains/update', 'Ows\Domain\Controllers\DomainsController@update');
+Route::get('domain/{domain_id}/edit/theme', 'Ows\Domain\Controllers\DomainsThemeController@editDomainTheme');
+
